@@ -1,0 +1,12 @@
+AGENTS.md
+IGNORE.MD
+design-qa.md
+dev-instructions/
+images/
+texts/
+*.txt
+*.log
+tmp/
+node_modules/
+.DS_Store
+Thumbs.db
