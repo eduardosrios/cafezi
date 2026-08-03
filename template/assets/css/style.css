@@ -1603,8 +1603,7 @@ small,
 .footer-bottom,
 .rating-card small,
 .origin-badge span,
-.feature-pill strong,
-.ref-link {
+.feature-pill strong {
   font-size: var(--fs-base) !important;
   line-height: 1.65;
 }
@@ -1915,16 +1914,7 @@ button {
   background: #000;
 }
 
-.ref-link {
-  font-family: "Manrope", Arial, sans-serif;
-  line-height: 52px !important;
-}
 
-.ref-link:hover,
-.ref-link:focus-visible {
-  opacity: .9 !important;
-  color: #fff !important;
-}
 
 @media (max-width: 991px) {
   .main-nav .nav-item {
@@ -1981,16 +1971,7 @@ button {
   .body-section {
     padding: 64px 20px;
   }
-  .ref-link {
-    width: 46px !important;
-    height: 46px !important;
-    line-height: 38px !important;
-    font-size: 18px !important;
-    right: 64px !important;
-  }
-  .ref-link-original {
-    right: 12px !important;
-  }
+
 }
 
 .icon-action,
@@ -3017,7 +2998,7 @@ button {
 }
 
 
-/* Stage 02: 36 reference-led body sections */
+/* Stage 02: body sections */
 .stage-two-body {
   --body-ink: #272523;
   --body-cream: #f0efe7;
@@ -5167,7 +5148,7 @@ button {
   }
 }
 
-/* Stage 03: Coshte reference footer */
+/* Stage 03: Cafezi footer */
 .site-footer.coshte-footer {
   position: relative;
   min-height: clamp(760px, 57.3vw, 1100px);
@@ -5425,7 +5406,6 @@ button {
   --font-main: "Manrope", Arial, sans-serif;
   --type-base: 16px;
   --type-lead: 20px;
-  --type-ref: 24px;
   --type-logo: 32px;
   --type-metric: 48px;
   --space-1: 10px;
@@ -5495,10 +5475,6 @@ address {
   font-size: var(--type-logo) !important;
 }
 
-.ref-link {
-  font-size: var(--type-ref) !important;
-  line-height: 52px !important;
-}
 
 .coffee-marquee span,
 .benefit-intro,
@@ -5916,25 +5892,6 @@ address {
   background: var(--cafezi-ink);
 }
 
-.ref-link,
-.ref-link:visited {
-  display: block !important;
-  width: 60px !important;
-  height: 60px !important;
-  min-width: 60px !important;
-  min-height: 60px !important;
-  padding: 0 !important;
-  color: var(--cafezi-white) !important;
-  background: #000000 !important;
-}
-
-.ref-link:hover,
-.ref-link:focus-visible,
-.ref-link:active {
-  color: var(--cafezi-white) !important;
-  background: var(--cafezi-sage) !important;
-  opacity: 1 !important;
-}
 
 .field-shell {
   position: relative;
@@ -6165,13 +6122,7 @@ textarea:focus {
     padding-bottom: var(--space-4);
   }
 
-  .ref-link {
-    right: 10px !important;
-  }
 
-  .ref-link-cut {
-    right: 80px !important;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6422,12 +6373,6 @@ textarea:focus {
   background-color: rgba(255, 255, 255, .08) !important;
 }
 
-#contact .ref-link,
-#contact .ref-link:visited,
-#contact .ref-link:hover,
-#contact .ref-link:focus-visible {
-  color: var(--cafezi-white) !important;
-}
 
 #contact .coshte-footer__headline a:hover,
 #contact .coshte-footer__headline a:focus-visible {
@@ -6448,13 +6393,6 @@ textarea:focus {
   background: var(--cafezi-ink) !important;
 }
 
-#body-content .ref-link,
-#body-content .ref-link:visited,
-#body-content .ref-link:hover,
-#body-content .ref-link:focus-visible,
-#body-content .ref-link:active {
-  color: var(--cafezi-white) !important;
-}
 
 #contact .cafezi-logo,
 #contact .cafezi-logo:hover,
@@ -7084,102 +7022,6 @@ textarea:focus {
     margin-left: auto;
   }
 }
-/* ETAPA 04G: reference controls */
-.has-reference-controls {
-  position: relative;
-}
-
-.reference-controls {
-  position: absolute;
-  z-index: 9999999;
-  top: 50%;
-  right: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 60px);
-  gap: 10px;
-  width: 130px;
-  transform: translateY(-50%);
-  pointer-events: auto;
-}
-
-.reference-control,
-.reference-control:visited {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  min-height: 60px;
-  padding: 0;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #000000;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
-  font: 800 24px/1 Manrope, Arial, sans-serif;
-  text-align: center;
-  text-decoration: none;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: opacity 160ms ease, background-color 160ms ease, transform 160ms ease;
-}
-
-.reference-control:hover,
-.reference-control:focus-visible,
-.reference-control:active {
-  color: #ffffff;
-  background: #000000;
-  text-decoration: none;
-  opacity: 1;
-  transform: scale(1.04);
-}
-
-.reference-control:focus-visible {
-  outline: 3px solid #f4c95d;
-  outline-offset: 3px;
-}
-
-.reference-control--multi.is-active,
-.reference-control--number.is-copied {
-  color: #ffffff;
-  background: #16803b;
-  opacity: 1;
-}
-
-.reference-control--number.is-selected {
-  box-shadow: 0 0 0 3px #16803b, 0 4px 18px rgba(0, 0, 0, 0.24);
-}
-
-.reference-control--number.is-copy-error {
-  background: #a52a2a;
-  opacity: 1;
-}
-
-.reference-control i {
-  line-height: 1;
-}
-
-.reference-copy-status {
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  border: 0;
-  white-space: nowrap;
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .reference-control {
-    transition: none;
-  }
-}
 
 /* ETAPA 02b / 04 / 05: sections 73-113 */
 .stage-two-extension {
@@ -7208,7 +7050,7 @@ textarea:focus {
 .ext-heading.centered { margin-right: auto; margin-left: auto; text-align: center; }
 .ext-heading > span, .ext-eyebrow, .ext-section [class*="copy"] > span, .ext-section figcaption > span { display: inline-block; margin-bottom: 14px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ext-heading p { max-width: 620px; margin-right: auto; margin-left: auto; }
-.ext-button, .ext-section button:not(.reference-control), .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
+.ext-button, .ext-section button, .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
 .ext-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 148px; padding: 12px 22px; border: 1px solid currentColor; border-radius: 999px; font-weight: 750; text-decoration: none; transition: transform .25s ease, color .25s ease, background-color .25s ease, border-color .25s ease; }
 .ext-button:hover, .ext-button:focus-visible { color: #fff; background: var(--ext-brown); border-color: var(--ext-brown); transform: translateY(-2px); }
 .ext-button.dark { color: #fff; background: var(--ext-ink); border-color: var(--ext-ink); }
@@ -8650,8 +8492,8 @@ textarea:focus {
   position: relative;
   flex: 0 0 auto;
   justify-self: auto;
-  width: 166px;
-  height: 166px;
+  width: 161px;
+  height: 161px;
   margin: 0;
   border: 4px solid var(--hero-bg);
   color: var(--hero-bg);
@@ -8705,8 +8547,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 160px;
-    height: 160px;
+    width: 155px;
+    height: 155px;
   }
 }
 
@@ -8729,8 +8571,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 116px;
-    height: 116px;
+    width: 111px;
+    height: 111px;
   }
 
   .coshte-hero .hero-actions .hero-signature-mark {
@@ -8775,8 +8617,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 115px;
   }
 
   .coshte-hero .hero-actions .hero-signature {
@@ -8823,8 +8665,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 112px;
-    height: 112px;
+    width: 107px;
+    height: 107px;
     margin: 0;
   }
 
@@ -8857,8 +8699,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 104px;
-    height: 104px;
+    width: 99px;
+    height: 99px;
   }
 
   .coshte-hero .hero-actions .hero-signature {
@@ -8871,4 +8713,77 @@ textarea:focus {
   }
 
 
+}
+/* Hero desktop navigation and logo order */
+@media (min-width: 1101px) {
+  .coshte-hero .hero-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .coshte-hero .main-nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+
+  .coshte-hero .cafezi-logo {
+    position: absolute;
+    left: 50%;
+    grid-column: auto;
+    grid-row: 1;
+    justify-self: auto;
+    transform: translateX(-50%);
+  }
+
+  .coshte-hero .nav-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+}
+.coshte-hero .cafezi-logo {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0 !important;
+}
+
+@media (min-width: 1101px) {
+  .coshte-hero .cafezi-logo {
+    position: absolute;
+  }
+}
+
+.coshte-hero .cafezi-logo-vertical-word {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--hero-ink);
+  font-weight: 800;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.coshte-hero .cafezi-logo-vertical-word span {
+  display: block;
+  height: 34px;
+  line-height: 11px !important;
+  font-size: 33px !important;
+}
+
+@media (max-width: 1100px) {
+  .coshte-hero .hero-header,
+  .coshte-hero .hero-header.is-sticky-visible {
+    min-height: 230px;
+    align-items: start;
+    padding-top: 6px;
+  }
 }
