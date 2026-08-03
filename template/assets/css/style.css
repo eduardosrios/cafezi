@@ -2505,11 +2505,20 @@ button {
   width: 46px;
   height: 46px;
   min-height: 46px;
+  padding: 0;
   border: 0;
   border-radius: 0;
   color: var(--hero-ink);
   font-size: 26px;
   background: transparent;
+}
+
+.coshte-hero .nav-toggle-icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  place-self: center;
+  object-fit: contain;
 }
 
 .coshte-hero .hero-intro {
@@ -2594,12 +2603,8 @@ button {
 }
 
 .coshte-hero .hero-buy span {
-  padding: 0 8px;
-  border-radius: 0;
-  color: #000;
-  background: #fff;
   font-size: 18px !important;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
 }
 
