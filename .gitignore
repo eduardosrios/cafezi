@@ -10,3 +10,7 @@ tmp/
 node_modules/
 .DS_Store
 Thumbs.db
+/*.zip
+/template/screenshot-preview.html
+/template/assets/css/stage2-fidelity.css
+/template/assets/images/body/ref-crops/
