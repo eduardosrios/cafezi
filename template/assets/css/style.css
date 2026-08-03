@@ -2613,7 +2613,9 @@ button {
 }
 
 .coshte-hero .hero-buy span {
-  font-size: 16px;
+  font-size: 18px !important;
+  font-weight: 700;
+  font-style: italic;
   text-transform: capitalize;
 }
 
@@ -8651,9 +8653,9 @@ textarea:focus {
   width: 166px;
   height: 166px;
   margin: 0;
-  border: 2px solid var(--hero-bg);
+  border: 4px solid var(--hero-bg);
   color: var(--hero-bg);
-  background: var(--hero-ink);
+  background: #000;
   transform: none;
 }
 
@@ -8703,8 +8705,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
   }
 }
 
