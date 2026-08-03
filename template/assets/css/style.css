@@ -2594,16 +2594,17 @@ button {
 }
 
 .coshte-hero .hero-buy span {
+  padding: 0 8px;
+  border-radius: 0;
+  color: #000;
+  background: #fff;
   font-size: 18px !important;
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
 .coshte-hero .hero-buy:hover,
 .coshte-hero .hero-buy:focus-visible {
-  color: var(--hero-bg);
-  background: var(--hero-ink);
   transform: translateY(-3px);
 }
 
@@ -8291,7 +8292,7 @@ textarea:focus {
     font-size: 14px;
   }
 }
-/* Fidelity review pass 7: screenshot-visible copy alignment and final desktop layering. */
+/* Final desktop copy alignment and layering pass. */
 @media (min-width: 1200px) {
   #body-content .s29 .welcome-one {
     position: relative;
@@ -8434,6 +8435,7 @@ textarea:focus {
 .coshte-hero .hero-intro {
   position: relative;
   z-index: 3;
+  transform: translateY(15px);
   grid-template-columns: 42% clamp(200px, 25vw, 300px) minmax(360px, 1fr);
   gap: clamp(12px, 1vw, 22px);
   min-height: 279px;
@@ -8479,6 +8481,8 @@ textarea:focus {
 }
 
 .coshte-hero .hero-actions {
+  position: relative;
+  z-index: 5;
   grid-column: 3;
   display: flex;
   align-items: center;
@@ -8492,8 +8496,8 @@ textarea:focus {
   position: relative;
   flex: 0 0 auto;
   justify-self: auto;
-  width: 161px;
-  height: 161px;
+  width: 171px;
+  height: 171px;
   margin: 0;
   border: 4px solid var(--hero-bg);
   color: var(--hero-bg);
@@ -8507,13 +8511,10 @@ textarea:focus {
 
 .coshte-hero .hero-actions .hero-buy:nth-child(1) { z-index: 1; }
 .coshte-hero .hero-actions .hero-buy:nth-child(2) { z-index: 2; }
-.coshte-hero .hero-actions .hero-buy:nth-child(3) { z-index: 3; }
 
 .coshte-hero .hero-actions .hero-buy:hover,
 .coshte-hero .hero-actions .hero-buy:focus-visible {
   z-index: 4;
-  color: var(--hero-ink);
-  background: var(--hero-bg);
   transform: translateY(-3px);
 }
 
@@ -8533,6 +8534,7 @@ textarea:focus {
 
 .coshte-hero .hero-visual {
   margin-top: 70px;
+  transform: translateY(15px);
 }
 
 @media (min-width: 992px) and (max-width: 1599px) {
@@ -8547,8 +8549,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 155px;
-    height: 155px;
+    width: 165px;
+    height: 165px;
   }
 }
 
@@ -8571,8 +8573,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 111px;
-    height: 111px;
+    width: 121px;
+    height: 121px;
   }
 
   .coshte-hero .hero-actions .hero-signature-mark {
@@ -8617,8 +8619,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 115px;
-    height: 115px;
+    width: 125px;
+    height: 125px;
   }
 
   .coshte-hero .hero-actions .hero-signature {
@@ -8665,8 +8667,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 107px;
-    height: 107px;
+    width: 117px;
+    height: 117px;
     margin: 0;
   }
 
@@ -8699,8 +8701,8 @@ textarea:focus {
   }
 
   .coshte-hero .hero-actions .hero-buy {
-    width: 99px;
-    height: 99px;
+    width: 109px;
+    height: 109px;
   }
 
   .coshte-hero .hero-actions .hero-signature {
