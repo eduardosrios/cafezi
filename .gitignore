@@ -2,7 +2,7 @@ AGENTS.md
 IGNORE.MD
 design-qa.md
 dev-instructions/
-images/
+/images/
 texts/
 *.txt
 *.log
