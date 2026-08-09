@@ -2501,6 +2501,7 @@ button {
 
 .coshte-hero .nav-toggle {
   display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   justify-self: end;
   width: 46px;
   height: 46px;
@@ -2515,8 +2516,8 @@ button {
 
 .coshte-hero .nav-toggle-icon {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: auto;
+  height: 58px;
   place-self: center;
   object-fit: contain;
 }
@@ -8768,13 +8769,13 @@ textarea:focus {
 
 .coshte-hero .cafezi-logo-vertical-word {
   position: absolute;
-  top: 0;
+  top: 26px;
   left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--hero-ink);
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   transform: translateX(-50%);
 }
