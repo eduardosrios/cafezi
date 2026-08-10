@@ -9036,6 +9036,18 @@ textarea:focus {
   overflow: visible;
 }
 
+#body-content .stage-two-extension .s84 .ext-spectrum-band {
+  position: absolute;
+  z-index: 10;
+  top: 178px;
+  left: 50%;
+  width: 100vw;
+  height: 124px;
+  pointer-events: none;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
 #body-content .stage-two-extension .s84 .ext-spectrum-media-row {
   position: absolute;
   z-index: 1;
@@ -9086,11 +9098,16 @@ textarea:focus {
 #body-content .stage-two-extension .s84 .ext-spectrum-copy {
   position: absolute;
   z-index: 30;
-  top: 250px;
-  right: 0;
-  left: 0;
+  top: 178px;
+  right: auto;
+  left: calc(50% - 30px);
+  box-sizing: border-box;
   width: 100%;
+  min-height: 124px;
+  padding-top: 22px;
+  padding-bottom: 20px;
   background: rgba(255,255,255,.92);
+  text-align: center;
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row h3,
@@ -9104,16 +9121,16 @@ textarea:focus {
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row h3 {
-  min-height: 34px;
-  padding: 8px 10px 2px 20px;
+  min-height: 42px;
+  padding: 13px 10px 4px 20px;
   font-family: var(--font-main);
   font-size: 20px;
   line-height: 1.05;
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row p {
-  min-height: 28px;
-  padding: 0 10px 8px 20px;
+  min-height: 40px;
+  padding: 2px 10px 14px 20px;
   font-size: 12px;
   line-height: 1.25;
 }
