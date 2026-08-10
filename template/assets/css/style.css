@@ -27,7 +27,7 @@ body {
   min-width: 320px;
   margin: 0;
   color: var(--ink);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   background: var(--brown-950);
 }
 
@@ -92,7 +92,7 @@ a {
 }
 
 .brand-name {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 44px;
   font-weight: 800;
   line-height: 1;
@@ -214,7 +214,7 @@ h1 {
   max-width: 1240px;
   margin: 74px auto 0;
   color: var(--ink);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 136px;
   font-weight: 800;
   line-height: .92;
@@ -808,7 +808,7 @@ h1 {
 .story-box h3 {
   margin: 0;
   color: inherit;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 48px;
   line-height: 1.05;
   letter-spacing: 0;
@@ -1024,13 +1024,13 @@ h1 {
   color: var(--ink);
 }
 
-.story-box p { color: rgba(255, 250, 243, .82); font-family: "Manrope", Arial, sans-serif; font-size: 32px; line-height: 1.25; }
+.story-box p { color: rgba(255, 250, 243, .82); font-family: var(--font-main); font-size: 32px; line-height: 1.25; }
 
 .step-row article span,
 .stats-grid strong {
   display: block;
   color: #9f6b37;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 44px;
   font-weight: 800;
   line-height: 1;
@@ -1260,7 +1260,7 @@ h1 {
 }
 
 .footer-logo strong {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 42px;
   font-weight: 800;
   line-height: .9;
@@ -1565,7 +1565,7 @@ button,
 input,
 textarea,
 select {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
 }
 
 body {
@@ -1582,33 +1582,9 @@ h6,
 .brand-name,
 .footer-logo strong,
 .story-box p {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   letter-spacing: 0;
 }
-
-p,
-li,
-th,
-td,
-summary,
-small,
-.section-heading span,
-.body-card-grid p,
-.body-card-grid strong,
-.quote-grid strong,
-.footer-column a,
-.footer-column p,
-.footer-newsletter-copy p,
-.footer-brand-block p,
-.footer-bottom,
-.rating-card small,
-.origin-badge span,
-.feature-pill strong,
-.ref-link {
-  font-size: var(--fs-base) !important;
-  line-height: 1.65;
-}
-
 .main-nav,
 .main-nav a,
 .submenu a,
@@ -1914,18 +1890,6 @@ button {
   box-shadow: var(--shadow);
   background: #000;
 }
-
-.ref-link {
-  font-family: "Manrope", Arial, sans-serif;
-  line-height: 52px !important;
-}
-
-.ref-link:hover,
-.ref-link:focus-visible {
-  opacity: .9 !important;
-  color: #fff !important;
-}
-
 @media (max-width: 991px) {
   .main-nav .nav-item {
     width: 100%;
@@ -1981,14 +1945,6 @@ button {
   .body-section {
     padding: 64px 20px;
   }
-  .ref-link {
-    width: 46px !important;
-    height: 46px !important;
-    line-height: 38px !important;
-    font-size: 18px !important;
-    right: 64px !important;
-  }
-  .ref-link-original {
     right: 12px !important;
   }
 }
@@ -2438,7 +2394,7 @@ button {
   overflow: visible;
   color: var(--hero-ink);
   background: var(--hero-bg);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   isolation: auto;
 }
 
@@ -2594,7 +2550,7 @@ button {
   max-width: none;
   margin: 0;
   color: var(--hero-ink);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 68px;
   font-weight: 400;
   line-height: 1.08;
@@ -2661,7 +2617,7 @@ button {
   max-width: 760px;
   margin: 0 0 82px;
   color: var(--hero-ink);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 56px;
   font-weight: 500;
   line-height: 1.12;
@@ -2690,7 +2646,7 @@ button {
 
 .coshte-hero .hero-offer strong {
   color: var(--hero-ink);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 54px;
   font-weight: 500;
   line-height: 1.1;
@@ -3024,6 +2980,7 @@ button {
 }
 
 
+
 .stage-two-body {
   --body-ink: #272523;
   --body-cream: #f0efe7;
@@ -3036,7 +2993,7 @@ button {
   --body-yellow: #ffd54d;
   color: var(--body-ink);
   background: var(--body-cream);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
 }
 
 .stage-two-body .cafe-section {
@@ -3072,13 +3029,13 @@ button {
 .stage-two-body input,
 .stage-two-body select,
 .stage-two-body button {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   letter-spacing: 0;
 }
 
 .stage-two-body h2 {
   margin: 0;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 52px;
   font-weight: 500;
   line-height: 1.08;
@@ -4107,7 +4064,7 @@ button {
 
 .stage-two-body .soil-grid h2,
 .stage-two-body .soil-grid h3 {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   text-transform: none;
 }
 
@@ -4134,7 +4091,7 @@ button {
 
 .stage-two-body .roast-card-grid h3 {
   margin: 17px 0 6px;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 20px;
 }
 
@@ -4151,13 +4108,13 @@ button {
 
 .stage-two-body .ethical-grid h2 {
   margin-bottom: 70px;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   text-transform: none;
 }
 
 .stage-two-body .ethical-grid h3 {
   margin: 0 0 14px;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
 }
 
 .stage-two-body .ethical-grid img {
@@ -4173,7 +4130,7 @@ button {
 
 .stage-two-body .bestseller-products h2,
 .stage-two-body .roaster-product h2 {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-weight: 800;
 }
 
@@ -4279,7 +4236,7 @@ button {
   left: 36px;
   bottom: 34px;
   color: #fff;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 40px;
   font-weight: 800;
   line-height: .98;
@@ -4470,7 +4427,7 @@ button {
 .stage-two-body .welcome-copy h2,
 .stage-two-body .chef-team h2,
 .stage-two-body .chef-team h3 {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   text-transform: none;
 }
 
@@ -4719,7 +4676,7 @@ button {
 
 .stage-two-body .circle-category-row h3 {
   margin: 18px 0 0;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 18px;
   font-weight: 400;
 }
@@ -4752,7 +4709,7 @@ button {
 }
 
 .stage-two-body .reward-layout .copy-card h2 {
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: 40px;
   text-transform: none;
 }
@@ -5173,6 +5130,7 @@ button {
   }
 }
 
+
 .site-footer.coshte-footer {
   position: relative;
   min-height: clamp(760px, 57.3vw, 1100px);
@@ -5248,7 +5206,7 @@ button {
 .coshte-footer__headline a {
   max-width: 100%;
   color: #292927;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: clamp(56px, 5vw, 96px);
   font-weight: 300;
   line-height: 1;
@@ -5499,12 +5457,6 @@ address {
 .brand-name {
   font-size: var(--type-logo) !important;
 }
-
-.ref-link {
-  font-size: var(--type-ref) !important;
-  line-height: 52px !important;
-}
-
 .coffee-marquee span,
 .benefit-intro,
 .section-lead {
@@ -5920,27 +5872,6 @@ address {
   object-fit: cover;
   background: var(--cafezi-ink);
 }
-
-.ref-link,
-.ref-link:visited {
-  display: block !important;
-  width: 60px !important;
-  height: 60px !important;
-  min-width: 60px !important;
-  min-height: 60px !important;
-  padding: 0 !important;
-  color: var(--cafezi-white) !important;
-  background: #000000 !important;
-}
-
-.ref-link:hover,
-.ref-link:focus-visible,
-.ref-link:active {
-  color: var(--cafezi-white) !important;
-  background: var(--cafezi-sage) !important;
-  opacity: 1 !important;
-}
-
 .field-shell {
   position: relative;
   display: block;
@@ -6169,12 +6100,6 @@ textarea:focus {
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
   }
-
-  .ref-link {
-    right: 10px !important;
-  }
-
-  .ref-link-cut {
     right: 80px !important;
   }
 }
@@ -6426,14 +6351,6 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background-color: rgba(255, 255, 255, .08) !important;
 }
-
-#contact .ref-link,
-#contact .ref-link:visited,
-#contact .ref-link:hover,
-#contact .ref-link:focus-visible {
-  color: var(--cafezi-white) !important;
-}
-
 #contact .coshte-footer__headline a:hover,
 #contact .coshte-footer__headline a:focus-visible {
   color: var(--cafezi-ink) !important;
@@ -6452,15 +6369,6 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background: var(--cafezi-ink) !important;
 }
-
-#body-content .ref-link,
-#body-content .ref-link:visited,
-#body-content .ref-link:hover,
-#body-content .ref-link:focus-visible,
-#body-content .ref-link:active {
-  color: var(--cafezi-white) !important;
-}
-
 #contact .cafezi-logo,
 #contact .cafezi-logo:hover,
 #contact .cafezi-logo:focus,
@@ -7089,7 +6997,10 @@ textarea:focus {
     margin-left: auto;
   }
 }
-/* Extended sections */
+@media (prefers-reduced-motion: reduce) {
+}
+
+/* ETAPA 02b / 04 / 05: sections 73-113 */
 .stage-two-extension {
   --ext-ink: #171513;
   --ext-dark: #111415;
@@ -7101,7 +7012,7 @@ textarea:focus {
   --ext-coral: #b97764;
   color: var(--ext-ink);
   background: var(--ext-cream);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
 }
 .stage-two-extension *, .stage-two-extension *::before, .stage-two-extension *::after { box-sizing: border-box; }
 .stage-two-extension .ext-section { position: relative; width: 100%; min-width: 0; padding: clamp(72px, 8vw, 128px) 0; overflow: hidden; font-size: 16px; line-height: 1.65; }
@@ -7116,7 +7027,6 @@ textarea:focus {
 .ext-heading.centered { margin-right: auto; margin-left: auto; text-align: center; }
 .ext-heading > span, .ext-eyebrow, .ext-section [class*="copy"] > span, .ext-section figcaption > span { display: inline-block; margin-bottom: 14px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ext-heading p { max-width: 620px; margin-right: auto; margin-left: auto; }
-.ext-button, .ext-section button, .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
 .ext-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 148px; padding: 12px 22px; border: 1px solid currentColor; border-radius: 999px; font-weight: 750; text-decoration: none; transition: transform .25s ease, color .25s ease, background-color .25s ease, border-color .25s ease; }
 .ext-button:hover, .ext-button:focus-visible { color: #fff; background: var(--ext-brown); border-color: var(--ext-brown); transform: translateY(-2px); }
 .ext-button.dark { color: #fff; background: var(--ext-ink); border-color: var(--ext-ink); }
@@ -7230,7 +7140,7 @@ textarea:focus {
 .ext-stat-grid strong { display: block; margin-bottom: 6px; font-size: clamp(2.4rem, 4vw, 4.5rem); line-height: 1; }
 .ext-logo-row { padding: 54px 0; background: #fff; }
 .ext-logo-row p { text-align: center; }
-.ext-logo-row ul { display: flex; margin: 0; padding: 0; justify-content: space-between; gap: 20px; list-style: none; color: #7c7974; font-family: Georgia, serif; font-size: 1.4rem; font-style: italic; }
+.ext-logo-row ul { display: flex; margin: 0; padding: 0; justify-content: space-between; gap: 20px; list-style: none; color: #7c7974; font-family: var(--font-main); font-size: 1.4rem; font-style: italic; }
 .ext-tip-grid { padding: 50px 0; background: #fff; }
 .ext-tip-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .ext-tip-cards article { position: relative; min-height: 350px; overflow: hidden; }
@@ -7241,7 +7151,7 @@ textarea:focus {
 .ext-quote-hero > img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
 .ext-quote-hero::after { background: rgba(0,0,0,.52); }
 .ext-quote-hero blockquote { position: relative; z-index: 1; width: min(980px, calc(100% - 48px)); margin: 0; text-align: center; }
-.ext-quote-hero blockquote p { font-family: Georgia, serif; font-size: clamp(2rem, 4.4vw, 4.6rem); line-height: 1.18; opacity: 1; }
+.ext-quote-hero blockquote p { font-family: var(--font-main); font-size: clamp(2rem, 4.4vw, 4.6rem); line-height: 1.18; opacity: 1; }
 .ext-newsletter { text-align: center; }
 .ext-newsletter.coral { color: #fff; background: var(--ext-coral); }
 .ext-newsletter .container { max-width: 900px; }
@@ -7270,7 +7180,7 @@ textarea:focus {
 .ext-bean-hero { padding-bottom: 70px; color: #fff; background: #050505; }
 .ext-bean-hero figure { margin: 0; }
 .ext-bean-hero figure img { height: 500px; object-fit: cover; }
-.ext-bean-hero h2 { font-family: Georgia, serif; font-size: clamp(2.8rem, 5vw, 5.5rem); text-transform: uppercase; }
+.ext-bean-hero h2 { font-family: var(--font-main); font-size: clamp(2.8rem, 5vw, 5.5rem); text-transform: uppercase; }
 .ext-origin-list { display: flex; padding-top: 36px; justify-content: center; gap: 28px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.25); }
 .ext-origin-list span { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
 .ext-product-slider { color: #fff; background: #050505; }
@@ -7298,7 +7208,7 @@ textarea:focus {
 .ext-follow-row .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .ext-follow-row strong { font-size: .86rem; text-transform: uppercase; letter-spacing: .08em; }
 .ext-marquee { padding: 22px 0; color: #fff; background: #0a3242; }
-.ext-marquee-track { display: flex; width: max-content; min-width: 100%; align-items: center; justify-content: space-around; gap: 24px; font-family: Georgia, serif; font-size: clamp(1.25rem, 2vw, 2rem); text-transform: uppercase; }
+.ext-marquee-track { display: flex; width: max-content; min-width: 100%; align-items: center; justify-content: space-around; gap: 24px; font-family: var(--font-main); font-size: clamp(1.25rem, 2vw, 2rem); text-transform: uppercase; }
 .ext-marquee-track i { color: #d66a86; font-size: .78rem; }
 .ext-handpicked { background: #fff; }
 .ext-handpicked figure { margin: 0; }
@@ -7320,7 +7230,7 @@ textarea:focus {
 .ext-checker { min-height: 120px; padding: 0; background: #f7f1e5 url("../images/body/bluebrew-checker.webp") center / auto 100% repeat-x; }
 .ext-checker-track { display: none; }
 .ext-explore { background: #ead3bb; }
-.ext-explore h2 { font-family: Georgia, serif; font-size: clamp(4rem, 8vw, 8.5rem); }
+.ext-explore h2 { font-family: var(--font-main); font-size: clamp(4rem, 8vw, 8.5rem); }
 .ext-explore figure { margin: 0; }
 .ext-explore figure img { height: 230px; border-radius: 50% 0 50% 50%; object-fit: cover; }
 .ext-ghost-word { padding: 18px 0; background: var(--ext-paper); }
@@ -7340,7 +7250,7 @@ textarea:focus {
 .ext-country-grid { display: grid; margin-top: 26px; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .ext-country-grid article { padding: 18px; color: var(--ext-ink); background: #f5eee3; }
 .ext-country-grid img { height: 210px; object-fit: contain; filter: sepia(.45); }
-.ext-country-grid h2 { margin-bottom: 8px; font-size: 2.1rem; font-family: Georgia, serif; }
+.ext-country-grid h2 { margin-bottom: 8px; font-size: 2.1rem; font-family: var(--font-main); }
 .ext-country-grid button { width: 100%; padding: 10px 16px; border: 1px solid var(--ext-ink); border-radius: 999px; background: transparent; }
 .ext-origin-status { min-height: 25px; margin: 22px 0 0; text-align: center; opacity: 1; }
 .ext-closing-quote { color: var(--ext-brown); background: #f3d8c7; text-align: center; }
@@ -7487,6 +7397,7 @@ textarea:focus {
   .stage-two-extension .ext-senoa-word p { font-size: 25vw !important; }
   .stage-two-extension .ext-ghost-word p { font-size: 14vw !important; }
 }
+/* Fidelity rework: initial correction for user-selected sections. */
 @media (min-width: 1200px) {
   #body-content :is(.s03,.s06,.s07,.s08,.s10,.s12,.s21,.s25,.s27,.s29,.s32,.s73,.s74,.s75,.s77,.s82,.s83,.s84,.s88,.s90,.s92,.s93,.s95,.s96,.s97,.s98,.s99,.s100,.s101,.s103,.s104,.s105,.s107,.s108,.s112,.s113),
   #body-content :is(.s03,.s06,.s07,.s08,.s10,.s12,.s21,.s25,.s27,.s29,.s32,.s73,.s74,.s75,.s77,.s82,.s83,.s84,.s88,.s90,.s92,.s93,.s95,.s96,.s97,.s98,.s99,.s100,.s101,.s103,.s104,.s105,.s107,.s108,.s112,.s113) * { box-sizing: border-box; }
@@ -7615,7 +7526,7 @@ textarea:focus {
 
   #body-content .s82 { padding: 0; }
   #body-content .s82 .extension-container { height: 100%; gap: 44px; }
-  #body-content .s82 h2 { font-family: "Brush Script MT", "Segoe Script", cursive; font-size: 250px; font-weight: 400; line-height: .8; letter-spacing: -.06em; }
+  #body-content .s82 h2 { font-family: var(--font-main); font-size: 250px; font-weight: 400; line-height: .8; letter-spacing: -.06em; }
   #body-content .s82 span { align-self: flex-start; margin-top: 110px; }
 
   #body-content .s83 { padding: 68px 0; }
@@ -7705,6 +7616,7 @@ textarea:focus {
   #body-content .s113 { padding: 150px 0; }
   #body-content .s113 h2 { font-size: 68px; }
 }
+/* Fidelity review pass 1: structural selectors and composition. */
 @media (min-width: 1200px) {
   #body-content .s08,
   #body-content .s08 .section-inner { color: #272523; background: #ece7df; }
@@ -7744,7 +7656,7 @@ textarea:focus {
   #body-content .s77 .ext-overlay-copy h2 { font-size: 60px; }
 
   #body-content .s82 .container { height: 100%; }
-  #body-content .s82 h2 { font-family: "Brush Script MT","Segoe Script",cursive; font-size: 250px; font-weight: 400; line-height: .8; letter-spacing: -.06em; }
+  #body-content .s82 h2 { font-family: var(--font-main); font-size: 250px; font-weight: 400; line-height: .8; letter-spacing: -.06em; }
   #body-content .s82 .container > span { align-self: flex-start; margin-top: 110px; }
 
   #body-content .s83 .container { height: 100%; display: grid; place-content: center; }
@@ -7806,6 +7718,7 @@ textarea:focus {
 
   #body-content .s112 .container { height: 100%; }
 }
+
 @media (min-width: 1200px) {
   #body-content .cafe-section.s08 {
     color: #272523 !important;
@@ -7854,7 +7767,7 @@ textarea:focus {
   }
   #body-content .cafe-section.s29 .welcome-copy h2 {
     margin-bottom: 24px;
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 54px;
     line-height: 1;
   }
@@ -7890,7 +7803,7 @@ textarea:focus {
     opacity: .72;
   }
 
-  #body-content .stage-two-extension .s84 .ext-spectrum-row h3 { font-family: Georgia,serif; font-size: 20px; }
+  #body-content .stage-two-extension .s84 .ext-spectrum-row h3 { font-family: var(--font-main); font-size: 20px; }
   #body-content .stage-two-extension .s84 .ext-spectrum-row p { font-size: 12px; }
 
   #body-content .stage-two-extension .s104 figure img {
@@ -7899,6 +7812,7 @@ textarea:focus {
     object-fit: cover;
   }
 }
+/* Fidelity review pass 3: typography, hierarchy, and high-drift compositions. */
 @media (min-width: 1200px) {
   #body-content .s03 .section-heading-left {
     position: absolute;
@@ -7931,7 +7845,7 @@ textarea:focus {
   #body-content .s27 .menu-heading { text-align: center; }
   #body-content .s27 .menu-heading h2 {
     color: #3047a0 !important;
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 58px;
     text-transform: none;
   }
@@ -7948,7 +7862,7 @@ textarea:focus {
   #body-content .stage-two-extension .s73 .ext-heading h2 {
     margin-bottom: 10px;
     font-size: 32px;
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
   }
   #body-content .stage-two-extension .s73 .ext-card {
     background: #13191d;
@@ -7963,7 +7877,7 @@ textarea:focus {
     padding: 14px;
     color: #171513 !important;
     background: rgba(248,240,227,.92);
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 25px;
     line-height: 1.05;
     text-align: center;
@@ -7990,7 +7904,7 @@ textarea:focus {
     filter: saturate(.75) contrast(1.03);
   }
   #body-content .stage-two-extension .s96 .ext-product-card h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 38px;
     line-height: .98;
   }
@@ -8055,6 +7969,7 @@ textarea:focus {
     filter: sepia(.2);
   }
 }
+/* Fidelity review pass 4: spacing rhythm, card count, and focused detail. */
 @media (min-width: 1200px) {
   #body-content .s03 .section-heading-left {
     width: 510px;
@@ -8140,12 +8055,12 @@ textarea:focus {
   #body-content .stage-two-extension .s104 .ext-eyebrow { margin-bottom: 12px; }
   #body-content .stage-two-extension .s104 h2 {
     margin-bottom: 18px;
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     line-height: .98;
   }
 
   #body-content .stage-two-extension .s108 h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 88px;
     line-height: .82;
     text-transform: none;
@@ -8162,10 +8077,11 @@ textarea:focus {
     place-content: center;
   }
   #body-content .stage-two-extension .s113 h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     line-height: .98;
   }
 }
+/* Fidelity review pass 5: image crop fidelity and source-specific supporting content. */
 @media (min-width: 1200px) {
   #body-content .s06 .category-link:nth-child(1) img { object-position: center 52%; }
   #body-content .s06 .category-link:nth-child(2) img { object-position: center 46%; }
@@ -8246,6 +8162,7 @@ textarea:focus {
   #body-content .stage-two-extension .s112 .ext-country-grid article:nth-child(2) img { object-position: 52% center; }
   #body-content .stage-two-extension .s112 .ext-country-grid article:nth-child(3) img { object-position: 60% center; }
 }
+/* Fidelity review pass 6: controls, affordances, and copy rhythm. */
 @media (min-width: 1200px) {
   #body-content .s03 .editorial-product-grid article strong {
     font-size: 25px;
@@ -8350,6 +8267,7 @@ textarea:focus {
     font-size: 14px;
   }
 }
+
 @media (min-width: 1200px) {
   #body-content .s29 .welcome-one {
     position: relative;
@@ -8372,7 +8290,7 @@ textarea:focus {
   }
 
   #body-content .stage-two-extension .s75 .ext-copy-panel h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 42px;
     font-weight: 500;
   }
@@ -8400,7 +8318,7 @@ textarea:focus {
   }
 
   #body-content .stage-two-extension .s105 .ext-heading h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 40px;
     font-weight: 500;
   }
@@ -8413,6 +8331,7 @@ textarea:focus {
     text-wrap: balance;
   }
 }
+/* Fidelity review pass 8: final desktop balance and verification-state polish. */
 @media (min-width: 1200px) {
   #body-content .s03 .section-heading-left h2 { max-width: 470px; }
 
@@ -8427,7 +8346,7 @@ textarea:focus {
   }
 
   #body-content .stage-two-extension .s88 .ext-heading h2 {
-    font-family: Georgia,serif;
+    font-family: var(--font-main);
     font-size: 46px;
   }
 
@@ -8846,6 +8765,7 @@ textarea:focus {
   }
 }
 
+
 #body-content .cafe-section.s08 {
   --s08-bg: #ece7df;
   --s08-brown: #332923;
@@ -8868,7 +8788,7 @@ textarea:focus {
   overflow: hidden;
   color: #f6f2ea;
   background: var(--s08-brown);
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: clamp(42px, 4.35vw, 72px);
   font-weight: 800;
   line-height: 1;
@@ -8909,7 +8829,7 @@ textarea:focus {
 #body-content .cafe-section.s08 .product-heading h2 {
   margin: 0 0 20px;
   color: var(--s08-brown) !important;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: clamp(64px, 6vw, 104px);
   font-weight: 800;
   line-height: .88;
@@ -8921,7 +8841,7 @@ textarea:focus {
   max-width: 540px;
   margin: 0;
   color: var(--s08-muted) !important;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-main);
   font-size: clamp(20px, 1.45vw, 28px);
   font-weight: 600;
   line-height: 1.18;
@@ -8990,7 +8910,7 @@ textarea:focus {
 #body-content .cafe-section.s08 .coffee-card-row h3 {
   margin: 0 0 clamp(18px, 1.6vw, 26px);
   color: #f6f2ea !important;
-  font-family: "Manrope", Arial, sans-serif;
+  font-family: var(--font-main);
   font-size: clamp(24px, 1.7vw, 32px);
   font-weight: 800;
   line-height: 1;
@@ -9017,7 +8937,7 @@ textarea:focus {
   gap: 16px;
   margin: 0 0 clamp(18px, 1.6vw, 28px);
   color: #f6f2ea !important;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-main);
   font-size: clamp(16px, 1.05vw, 20px);
   line-height: 1;
 }
@@ -9093,7 +9013,7 @@ textarea:focus {
 }
 /* Section 84 contained spectrum alignment */
 #body-content .stage-two-extension .s84 {
-  overflow: hidden;
+  overflow: visible;
 }
 
 #body-content .stage-two-extension .s84 > .container,
@@ -9102,14 +9022,33 @@ textarea:focus {
   height: 100%;
 }
 
+#body-content .stage-two-extension .s84 > .container > .row > .col-sm-12 {
+  position: relative;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row,
 #body-content .stage-two-extension .s84 .ext-spectrum-row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: start;
-  height: 100%;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row {
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-row {
+  position: relative;
+  z-index: 20;
+  height: 100%;
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row article {
@@ -9118,53 +9057,66 @@ textarea:focus {
   height: 100%;
   min-height: 0;
   padding-top: 70px;
-  overflow: hidden;
-  background: #fff;
+  overflow: visible;
+  background: transparent;
 }
 
-#body-content .stage-two-extension .s84 .ext-spectrum-row img {
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure {
+  position: relative;
+  width: 124%;
+  margin: 0;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure:nth-child(1) { z-index: 5; }
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure:nth-child(2) { z-index: 4; }
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure:nth-child(3) { z-index: 3; }
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure:nth-child(4) { z-index: 2; }
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row figure:nth-child(5) { z-index: 1; }
+
+#body-content .stage-two-extension .s84 .ext-spectrum-media-row img {
   display: block;
-  width: 106%;
+  width: 100%;
   max-width: none;
   height: auto;
   aspect-ratio: 1;
-  margin-left: -3%;
   border-radius: 50%;
   object-fit: cover;
 }
 
-#body-content .stage-two-extension .s84 .ext-spectrum-row h3,
-#body-content .stage-two-extension .s84 .ext-spectrum-row p {
+#body-content .stage-two-extension .s84 .ext-spectrum-copy {
   position: absolute;
-  z-index: 2;
+  z-index: 30;
+  top: 250px;
   right: 0;
   left: 0;
   width: 100%;
+  background: rgba(255,255,255,.92);
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-row h3,
+#body-content .stage-two-extension .s84 .ext-spectrum-row p {
+  position: static;
+  width: 100%;
   margin: 0;
   color: #171712 !important;
-  background: rgba(255,255,255,.92);
+  background: transparent;
   text-align: left;
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row h3 {
-  top: 250px;
-  bottom: auto;
   min-height: 34px;
   padding: 8px 10px 2px 20px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-main);
   font-size: 20px;
   line-height: 1.05;
 }
 
 #body-content .stage-two-extension .s84 .ext-spectrum-row p {
-  top: 284px;
-  bottom: auto;
   min-height: 28px;
   padding: 0 10px 8px 20px;
   font-size: 12px;
   line-height: 1.25;
 }
-
 @media (min-width: 1200px) {
   #body-content .stage-two-extension .s84 > .container { max-width: 1320px; }
 }
@@ -9186,4 +9138,37 @@ textarea:focus {
   #body-content .stage-two-extension .s84 .ext-spectrum-row p { right: 12%; left: 12%; width: 76%; }
   #body-content .stage-two-extension .s84 .ext-spectrum-row h3 { top: 214px; }
   #body-content .stage-two-extension .s84 .ext-spectrum-row p { top: 248px; }
+}
+/* Section 84 circle overlap */
+#body-content .stage-two-extension .s84 .ext-spectrum-row article {
+  isolation: isolate;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-row article:nth-child(1) { z-index: 5; }
+#body-content .stage-two-extension .s84 .ext-spectrum-row article:nth-child(2) { z-index: 4; }
+#body-content .stage-two-extension .s84 .ext-spectrum-row article:nth-child(3) { z-index: 3; }
+#body-content .stage-two-extension .s84 .ext-spectrum-row article:nth-child(4) { z-index: 2; }
+#body-content .stage-two-extension .s84 .ext-spectrum-row article:nth-child(5) { z-index: 1; }
+
+#body-content .stage-two-extension .s84 .ext-spectrum-row img {
+  position: relative;
+  z-index: 1;
+  width: 124%;
+  margin-left: -7%;
+}
+
+#body-content .stage-two-extension .s84 .ext-spectrum-row h3,
+#body-content .stage-two-extension .s84 .ext-spectrum-row p {
+  z-index: 6;
+}
+
+@media (max-width: 767.98px) {
+  #body-content .stage-two-extension .s84 .ext-spectrum-row img {
+    width: 260px;
+    margin: 0 auto;
+  }
+}
+
+.coshte-hero .hero-header.is-sticky-visible .cafezi-logo-vertical-word {
+  display: none;
 }
