@@ -58,14 +58,28 @@
 
   var $header = $(".hero-header");
   var $footer = $(".site-footer");
+  var lastStickyScrollY = window.scrollY || window.pageYOffset || 0;
+  var stickyDirection = "none";
 
-  function updateStickyHeader() {
+  function updateStickyHeader(event) {
     if (!$header.length || !$footer.length) {
       return;
     }
+    var currentScrollY = Math.max(window.scrollY || window.pageYOffset || 0, 0);
+    var delta = currentScrollY - lastStickyScrollY;
+    var isResize = event && event.type === "resize";
+
+    if (!isResize && Math.abs(delta) > 4) {
+      stickyDirection = delta < 0 ? "up" : "down";
+    }
+
     var footerTop = $footer[0].getBoundingClientRect().top;
-    var shouldShow = window.scrollY > 180 && footerTop > window.innerHeight;
+    var canStick = currentScrollY > 180 && footerTop > window.innerHeight;
+    var shouldShow = canStick && stickyDirection === "up";
+
+    $header.toggleClass("is-sticky-ready", canStick);
     $header.toggleClass("is-sticky-visible", shouldShow);
+    lastStickyScrollY = currentScrollY;
   }
 
   $(window).on("scroll resize", updateStickyHeader);
@@ -509,7 +523,6 @@
       $button.text("Add to cart").prop("disabled", false);
     }, 1600);
   });
-
 })(jQuery);
 
 

@@ -2999,7 +2999,7 @@ button {
 }
 
 
-/* Stage 02: 36 reference-led body sections */
+/* Stage 02: body sections */
 .stage-two-body {
   --body-ink: #272523;
   --body-cream: #f0efe7;
@@ -3687,7 +3687,7 @@ button {
 
 .stage-two-body .roast-process {
   color: #fff;
-  background: #111;
+  background: #000;
 }
 
 .stage-two-body .roast-process .section-index,
@@ -3745,8 +3745,8 @@ button {
   position: absolute;
   z-index: 2;
   top: 50%;
-  width: 210px;
-  height: 210px;
+  width: 230px;
+  height: 230px;
   border: 4px solid #fff;
   border-radius: 50%;
   background: #fff url("../images/hero-coffee-woman.webp") center center / cover no-repeat;
@@ -5298,7 +5298,7 @@ button {
   }
 }
 
-/* Stage 03: Coshte reference footer */
+/* Stage 03: Coshte footer */
 .site-footer.coshte-footer {
   position: relative;
   min-height: clamp(760px, 57.3vw, 1100px);
@@ -7162,101 +7162,7 @@ textarea:focus {
     margin-left: auto;
   }
 }
-/* ETAPA 04G: reference controls */
-.has-reference-controls {
-  position: relative;
-}
-
-.reference-controls {
-  position: absolute;
-  z-index: 9999999;
-  top: 50%;
-  right: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 60px);
-  gap: 10px;
-  width: 130px;
-  transform: translateY(-50%);
-  pointer-events: auto;
-}
-
-.reference-control,
-.reference-control:visited {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  min-height: 60px;
-  padding: 0;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #000000;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
-  font: 800 24px/1 Manrope, Arial, sans-serif;
-  text-align: center;
-  text-decoration: none;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: opacity 160ms ease, background-color 160ms ease, transform 160ms ease;
-}
-
-.reference-control:hover,
-.reference-control:focus-visible,
-.reference-control:active {
-  color: #ffffff;
-  background: #000000;
-  text-decoration: none;
-  opacity: 1;
-  transform: scale(1.04);
-}
-
-.reference-control:focus-visible {
-  outline: 3px solid #f4c95d;
-  outline-offset: 3px;
-}
-
-.reference-control--multi.is-active,
-.reference-control--number.is-copied {
-  color: #ffffff;
-  background: #16803b;
-  opacity: 1;
-}
-
-.reference-control--number.is-selected {
-  box-shadow: 0 0 0 3px #16803b, 0 4px 18px rgba(0, 0, 0, 0.24);
-}
-
-.reference-control--number.is-copy-error {
-  background: #a52a2a;
-  opacity: 1;
-}
-
-.reference-control i {
-  line-height: 1;
-}
-
-.reference-copy-status {
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  border: 0;
-  white-space: nowrap;
-}
-
-
 @media (prefers-reduced-motion: reduce) {
-  .reference-control {
-    transition: none;
-  }
 }
 
 /* ETAPA 02b / 04 / 05: sections 73-113 */
@@ -7286,7 +7192,6 @@ textarea:focus {
 .ext-heading.centered { margin-right: auto; margin-left: auto; text-align: center; }
 .ext-heading > span, .ext-eyebrow, .ext-section [class*="copy"] > span, .ext-section figcaption > span { display: inline-block; margin-bottom: 14px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ext-heading p { max-width: 620px; margin-right: auto; margin-left: auto; }
-.ext-button, .ext-section button:not(.reference-control), .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
 .ext-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 148px; padding: 12px 22px; border: 1px solid currentColor; border-radius: 999px; font-weight: 750; text-decoration: none; transition: transform .25s ease, color .25s ease, background-color .25s ease, border-color .25s ease; }
 .ext-button:hover, .ext-button:focus-visible { color: #fff; background: var(--ext-brown); border-color: var(--ext-brown); transform: translateY(-2px); }
 .ext-button.dark { color: #fff; background: var(--ext-ink); border-color: var(--ext-ink); }
@@ -9449,6 +9354,23 @@ textarea:focus {
 .coshte-hero .hero-header.is-sticky-visible .cafezi-logo-vertical-word {
   display: none;
 }
+.coshte-hero .hero-header.is-sticky-ready {
+  position: fixed !important;
+  z-index: 10000000;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #ffffff !important;
+  pointer-events: none;
+  transform: translateY(-110%);
+  transition: transform .34s ease;
+}
+
+.coshte-hero .hero-header.is-sticky-ready.is-sticky-visible {
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .coshte-hero .hero-header.is-sticky-visible {
   background: #ffffff !important;
 }
@@ -9466,8 +9388,8 @@ textarea:focus {
 }
 #body-content .s09.roast-process {
   color: #fff !important;
-  background: #111 !important;
-  background-color: #111 !important;
+  background: #000 !important;
+  background-color: #000 !important;
 }
 
 #body-content .s09.roast-process :where(.section-index, h2, h3, p) {
@@ -9487,7 +9409,7 @@ textarea:focus {
     --roast-image-height: 260px;
     --roast-image-offset: clamp(84px, 8vw, 126px);
     --roast-fade-width: clamp(350px, 35vw, 450px);
-    --roast-circle-half: 105px;
+    --roast-circle-half: 115px;
   }
 
   #body-content .s09.roast-process .roast-rows article {
@@ -9538,7 +9460,7 @@ textarea:focus {
     border: 6px solid transparent;
     border-radius: 50%;
     color: #fff;
-    background: #111;
+    background: #000;
     text-align: center;
     text-transform: uppercase;
   }
@@ -9581,11 +9503,11 @@ textarea:focus {
 
   #body-content .s09.roast-process .roast-rows article:nth-child(odd)::after {
     left: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
-    background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, .16) 26%, rgba(17, 17, 17, .42) 44%, rgba(17, 17, 17, .72) 64%, rgba(17, 17, 17, .92) 84%, #111 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .16) 26%, rgba(0, 0, 0, .42) 44%, rgba(0, 0, 0, .72) 64%, rgba(0, 0, 0, .92) 84%, #000 100%);
   }
 
   #body-content .s09.roast-process .roast-rows article:nth-child(even)::after {
     right: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
-    background: linear-gradient(270deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, .16) 26%, rgba(17, 17, 17, .42) 44%, rgba(17, 17, 17, .72) 64%, rgba(17, 17, 17, .92) 84%, #111 100%);
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .16) 26%, rgba(0, 0, 0, .42) 44%, rgba(0, 0, 0, .72) 64%, rgba(0, 0, 0, .92) 84%, #000 100%);
   }
 }
