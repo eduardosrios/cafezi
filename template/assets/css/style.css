@@ -52,7 +52,6 @@ a {
 }
 
 .hero-section::before {
-  content: "";
   position: absolute;
   inset: 0;
   z-index: -3;
@@ -115,7 +114,6 @@ a {
 }
 
 .main-nav a::after {
-  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -394,7 +392,6 @@ h1 {
 }
 
 .feature-pill::before {
-  content: "";
   position: absolute;
   top: 50%;
   right: calc(100% - 2px);
@@ -404,7 +401,6 @@ h1 {
 }
 
 .feature-pill::after {
-  content: "";
   position: absolute;
   top: 50%;
   right: calc(100% + 248px);
@@ -3354,25 +3350,26 @@ button {
   border-radius: 50%;
   background-image: url("../images/body/09-friends-cafe.webp");
   background-repeat: no-repeat;
-  background-size: 660px auto;
+  background-size: 590px auto;
   box-shadow: none;
+  border: 6px solid #fff;
 }
 
 .stage-two-body .menu-circle-top {
   z-index: 1;
   top: 0;
   left: -42px;
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   background-position: 18% 38%;
 }
 
 .stage-two-body .menu-circle-bottom {
   z-index: 2;
-  top: 176px;
-  left: 128px;
-  width: 316px;
-  height: 316px;
+  top: 162px;
+  left: 92px;
+  width: 270px;
+  height: 270px;
   background-position: 72% 72%;
 }
 
@@ -3398,7 +3395,9 @@ button {
     width: 274px;
     height: 274px;
   }
-}.stage-two-body .menu-list {
+}
+
+.stage-two-body .menu-list {
   align-self: center;
 }
 
@@ -3486,7 +3485,6 @@ button {
 }
 
 .stage-two-body .category-grid a::after {
-  content: "";
   position: absolute;
   inset: 0;
   background: rgba(20, 18, 16, .28);
@@ -3668,17 +3666,23 @@ button {
   background: var(--body-cream);
 }
 
+.stage-two-body .roast-wrapper {
+  width: 100%;
+}
+
 .stage-two-body .roast-rows {
   display: grid;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .stage-two-body .roast-rows article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: 230px;
+  position: relative;
+  min-height: 270px;
 }
 
 .stage-two-body .roast-rows h3 {
@@ -3690,8 +3694,43 @@ button {
 
 .stage-two-body .roast-rows img {
   width: 100%;
-  height: 230px;
+  height: 270px;
   object-fit: cover;
+}
+
+
+.stage-two-body .roast-rows .roast-circle {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: 230px;
+  height: 230px;
+  border: 12px solid #fff;
+  border-radius: 50%;
+  background: #fff url("../images/hero-coffee-woman.webp") center center / cover no-repeat;
+  pointer-events: none;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.stage-two-body .roast-rows article:nth-child(odd) .roast-circle {
+  left: calc(50% + 34px);
+}
+
+.stage-two-body .roast-rows article:nth-child(even) .roast-circle {
+  right: calc(50% + 34px);
+}
+
+@media (max-width: 991.98px) {
+  .stage-two-body .roast-rows .roast-circle {
+    top: auto;
+    right: auto;
+    bottom: 28px;
+    left: 50%;
+    width: 132px;
+    height: 132px;
+    transform: translateX(-50%);
+  }
 }
 
 .stage-two-body .testimonial-band {
@@ -3778,14 +3817,40 @@ button {
 }
 
 .stage-two-body .benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 56px;
   text-align: center;
 }
 
 .stage-two-body .benefit-grid article {
-  padding: 12px 24px;
+  min-width: 0;
+}
+
+
+
+.stage-two-body .benefit-grid.row {
+  gap: 0;
+}
+
+.stage-two-body .benefit-grid.row > article {
+  padding-top: 0;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-bottom: 0;
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  background: transparent !important;
+  border-radius: 0;
+}.stage-two-body .benefit-card {
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.stage-two-body .benefit-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 264px;
+  padding: 30px;
+  text-align: center;
 }
 
 .stage-two-body .benefit-grid i {
@@ -4281,7 +4346,6 @@ button {
 }
 
 .stage-two-body .service-triptych a::after {
-  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,.34);
@@ -4372,7 +4436,6 @@ button {
 
 .stage-two-body .seasonal-menu::before,
 .stage-two-body .seasonal-menu::after {
-  content: "";
   display: block;
   height: 54px;
   background: url("../images/body/bluebrew-checker.webp") center / auto 54px repeat-x;
@@ -5898,7 +5961,7 @@ address {
   display: block;
   width: 72px;
   height: 72px;
-  margin-bottom: var(--space-3);
+  margin: 0 auto var(--space-3);
   object-fit: contain;
 }
 
@@ -6626,7 +6689,6 @@ textarea:focus {
 }
 
 .brew-quiz-progress::before {
-  content: "";
   grid-column: 1;
   grid-row: 1;
   width: 100%;
