@@ -3335,7 +3335,70 @@ button {
   object-fit: cover;
 }
 
-.stage-two-body .menu-list {
+
+.stage-two-body .menu-table-media-block {
+  position: relative;
+  min-height: 640px;
+}
+
+.stage-two-body .menu-circle-stack {
+  position: relative;
+  width: min(100%, 390px);
+  min-height: 430px;
+  margin-top: 6px;
+}
+
+.stage-two-body .menu-circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-image: url("../images/body/09-friends-cafe.webp");
+  background-repeat: no-repeat;
+  background-size: 660px auto;
+  box-shadow: none;
+}
+
+.stage-two-body .menu-circle-top {
+  z-index: 1;
+  top: 0;
+  left: -42px;
+  width: 320px;
+  height: 320px;
+  background-position: 18% 38%;
+}
+
+.stage-two-body .menu-circle-bottom {
+  z-index: 2;
+  top: 176px;
+  left: 128px;
+  width: 316px;
+  height: 316px;
+  background-position: 72% 72%;
+}
+
+@media (max-width: 991.98px) {
+  .stage-two-body .menu-table-media-block {
+    min-height: 540px;
+  }
+
+  .stage-two-body .menu-circle-stack {
+    width: min(100%, 360px);
+    min-height: 390px;
+  }
+
+  .stage-two-body .menu-circle-top {
+    left: -18px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .stage-two-body .menu-circle-bottom {
+    top: 154px;
+    left: 112px;
+    width: 274px;
+    height: 274px;
+  }
+}.stage-two-body .menu-list {
   align-self: center;
 }
 
@@ -9104,7 +9167,7 @@ textarea:focus {
   box-sizing: border-box;
   width: 100%;
   min-height: 124px;
-  padding-top: 22px;
+  padding-top: 24px;
   padding-bottom: 20px;
   background: rgba(255,255,255,.92);
   text-align: center;
@@ -9188,4 +9251,7 @@ textarea:focus {
 
 .coshte-hero .hero-header.is-sticky-visible .cafezi-logo-vertical-word {
   display: none;
+}
+.coshte-hero .hero-header.is-sticky-visible {
+  background: #ffffff !important;
 }
