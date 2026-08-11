@@ -9543,3 +9543,98 @@ textarea:focus {
   height: calc(100% + 20px);
   margin: -10px;
 }
+#body-content .s09.roast-process {
+  color: #fff !important;
+  background: #111 !important;
+  background-color: #111 !important;
+}
+
+#body-content .s09.roast-process :where(.section-index, h2, h3, p) {
+  color: #fff !important;
+}
+@media (min-width: 992px) {
+  #body-content .s09.roast-process .roast-rows {
+    --roast-image-width: clamp(420px, 37vw, 520px);
+    --roast-image-height: 260px;
+    --roast-image-offset: clamp(84px, 8vw, 126px);
+    --roast-circle-half: 105px;
+  }
+
+  #body-content .s09.roast-process .roast-rows article {
+    min-height: calc(var(--roast-image-height) + 20px);
+  }
+
+  #body-content .s09.roast-process .roast-rows img {
+    width: var(--roast-image-width) !important;
+    height: var(--roast-image-height) !important;
+    border-radius: 0 !important;
+    object-fit: cover;
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(odd) img {
+    justify-self: start;
+    margin-left: var(--roast-image-offset);
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(even) img {
+    justify-self: end;
+    margin-right: var(--roast-image-offset);
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(odd) .roast-circle {
+    left: calc(50% + var(--roast-image-offset) - var(--roast-circle-half));
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(even) .roast-circle {
+    right: calc(50% + var(--roast-image-offset) - var(--roast-circle-half));
+  }
+
+  #body-content .s09.roast-process .roast-metrics {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    display: flex;
+    gap: 28px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  #body-content .s09.roast-process .roast-metrics > div {
+    display: grid;
+    width: 132px;
+    height: 132px;
+    place-items: center;
+    align-content: center;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, .08);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #body-content .s09.roast-process .roast-metrics span {
+    display: block;
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .08em;
+  }
+
+  #body-content .s09.roast-process .roast-metrics strong {
+    display: block;
+    margin-top: 5px;
+    color: #fff !important;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(odd) .roast-metrics {
+    left: calc(50% + var(--roast-image-offset) + 150px);
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(even) .roast-metrics {
+    right: calc(50% + var(--roast-image-offset) + 150px);
+  }
+}
