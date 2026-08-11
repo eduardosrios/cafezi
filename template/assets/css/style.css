@@ -1600,11 +1600,6 @@ small,
 .rating-card small,
 .origin-badge span,
 .feature-pill strong,
-.ref-link {
-  font-size: var(--fs-base) !important;
-  line-height: 1.65;
-}
-
 .main-nav,
 .main-nav a,
 .submenu a,
@@ -1910,18 +1905,6 @@ button {
   box-shadow: var(--shadow);
   background: #000;
 }
-
-.ref-link {
-  font-family: var(--font-main);
-  line-height: 52px !important;
-}
-
-.ref-link:hover,
-.ref-link:focus-visible {
-  opacity: .9 !important;
-  color: #fff !important;
-}
-
 @media (max-width: 991px) {
   .main-nav .nav-item {
     width: 100%;
@@ -1976,16 +1959,6 @@ button {
   }
   .body-section {
     padding: 64px 20px;
-  }
-  .ref-link {
-    width: 46px !important;
-    height: 46px !important;
-    line-height: 38px !important;
-    font-size: 18px !important;
-    right: 64px !important;
-  }
-  .ref-link-original {
-    right: 12px !important;
   }
 }
 
@@ -5652,12 +5625,6 @@ address {
 .brand-name {
   font-size: var(--type-logo) !important;
 }
-
-.ref-link {
-  font-size: var(--type-ref) !important;
-  line-height: 52px !important;
-}
-
 .coffee-marquee span,
 .benefit-intro,
 .section-lead {
@@ -6073,27 +6040,6 @@ address {
   object-fit: cover;
   background: var(--cafezi-ink);
 }
-
-.ref-link,
-.ref-link:visited {
-  display: block !important;
-  width: 60px !important;
-  height: 60px !important;
-  min-width: 60px !important;
-  min-height: 60px !important;
-  padding: 0 !important;
-  color: var(--cafezi-white) !important;
-  background: #000000 !important;
-}
-
-.ref-link:hover,
-.ref-link:focus-visible,
-.ref-link:active {
-  color: var(--cafezi-white) !important;
-  background: var(--cafezi-sage) !important;
-  opacity: 1 !important;
-}
-
 .field-shell {
   position: relative;
   display: block;
@@ -6321,14 +6267,6 @@ textarea:focus {
   .stage-two-body .cafe-section > .section-inner {
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
-  }
-
-  .ref-link {
-    right: 10px !important;
-  }
-
-  .ref-link-cut {
-    right: 80px !important;
   }
 }
 
@@ -6579,14 +6517,6 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background-color: rgba(255, 255, 255, .08) !important;
 }
-
-#contact .ref-link,
-#contact .ref-link:visited,
-#contact .ref-link:hover,
-#contact .ref-link:focus-visible {
-  color: var(--cafezi-white) !important;
-}
-
 #contact .coshte-footer__headline a:hover,
 #contact .coshte-footer__headline a:focus-visible {
   color: var(--cafezi-ink) !important;
@@ -6605,15 +6535,6 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background: var(--cafezi-ink) !important;
 }
-
-#body-content .ref-link,
-#body-content .ref-link:visited,
-#body-content .ref-link:hover,
-#body-content .ref-link:focus-visible,
-#body-content .ref-link:active {
-  color: var(--cafezi-white) !important;
-}
-
 #contact .cafezi-logo,
 #contact .cafezi-logo:hover,
 #contact .cafezi-logo:focus,
@@ -9552,11 +9473,20 @@ textarea:focus {
 #body-content .s09.roast-process :where(.section-index, h2, h3, p) {
   color: #fff !important;
 }
+
+#body-content .s09.roast-process .center-heading.compact {
+  margin-bottom: 82px;
+}
+
+#body-content .s09.roast-process .center-heading h2 {
+  font-size: clamp(2.25rem, 5vw, 4.8rem) !important;
+}
 @media (min-width: 992px) {
   #body-content .s09.roast-process .roast-rows {
     --roast-image-width: clamp(420px, 37vw, 520px);
     --roast-image-height: 260px;
     --roast-image-offset: clamp(84px, 8vw, 126px);
+    --roast-fade-width: clamp(210px, 17vw, 280px);
     --roast-circle-half: 105px;
   }
 
@@ -9592,7 +9522,7 @@ textarea:focus {
   #body-content .s09.roast-process .roast-metrics {
     position: absolute;
     z-index: 3;
-    top: 50%;
+    top: calc(50% - 18px);
     display: flex;
     gap: 28px;
     pointer-events: none;
@@ -9605,10 +9535,10 @@ textarea:focus {
     height: 132px;
     place-items: center;
     align-content: center;
-    border: 6px solid #fff;
+    border: 6px solid transparent;
     border-radius: 50%;
     color: #fff;
-    background: rgba(0, 0, 0, .08);
+    background: #111;
     text-align: center;
     text-transform: uppercase;
   }
@@ -9626,7 +9556,7 @@ textarea:focus {
     display: block;
     margin-top: 5px;
     color: #fff !important;
-    font-size: 30px;
+    font-size: 30px !important;
     line-height: 1;
   }
 
@@ -9636,5 +9566,26 @@ textarea:focus {
 
   #body-content .s09.roast-process .roast-rows article:nth-child(even) .roast-metrics {
     right: calc(50% + var(--roast-image-offset) + 150px);
+  }
+
+  #body-content .s09.roast-process .roast-rows article::after {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 1px);
+    width: var(--roast-fade-width);
+    height: calc(var(--roast-image-height) + 2px);
+    pointer-events: none;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(odd)::after {
+    left: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, #111 100%);
+  }
+
+  #body-content .s09.roast-process .roast-rows article:nth-child(even)::after {
+    right: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
+    background: linear-gradient(270deg, rgba(17, 17, 17, 0) 0%, #111 100%);
   }
 }
