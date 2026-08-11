@@ -2535,6 +2535,12 @@ button {
   height: 58px;
   place-self: center;
   object-fit: contain;
+  transform: rotate(0deg);
+  transition: transform .28s ease;
+}
+
+.coshte-hero .nav-toggle:hover .nav-toggle-icon {
+  transform: rotate(90deg);
 }
 
 .coshte-hero .hero-intro {
@@ -3707,7 +3713,15 @@ button {
 }
 
 .stage-two-body .roast-process {
-  background: var(--body-cream);
+  color: #fff;
+  background: #111;
+}
+
+.stage-two-body .roast-process .section-index,
+.stage-two-body .roast-process h2,
+.stage-two-body .roast-process h3,
+.stage-two-body .roast-process p {
+  color: #fff;
 }
 
 .stage-two-body .roast-wrapper {
@@ -3736,13 +3750,15 @@ button {
   text-transform: uppercase;
 }
 
+.stage-two-body .roast-rows article:nth-child(odd) h3 {
+  text-align: right;
+}
+
 .stage-two-body .roast-rows img {
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
-
-
 
 .stage-two-body .roast-rows article:nth-child(odd) img {
   border-radius: 500px 0 0 500px;
@@ -9514,6 +9530,10 @@ textarea:focus {
 }
 .coshte-hero .hero-header.is-sticky-visible {
   background: #ffffff !important;
+}
+
+.coshte-hero .hero-header.is-sticky-visible .cafezi-logo {
+  top: 13.5px;
 }
 
 /* Hero rectangular media scale correction */
