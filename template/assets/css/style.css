@@ -3350,26 +3350,26 @@ button {
   border-radius: 50%;
   background-image: url("../images/body/09-friends-cafe.webp");
   background-repeat: no-repeat;
-  background-size: 590px auto;
+  background-size: 620px auto;
   box-shadow: none;
-  border: 6px solid #fff;
+  border: 25px solid #fff;
 }
 
 .stage-two-body .menu-circle-top {
   z-index: 1;
   top: 0;
   left: -42px;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   background-position: 18% 38%;
 }
 
 .stage-two-body .menu-circle-bottom {
   z-index: 2;
-  top: 162px;
-  left: 92px;
-  width: 270px;
-  height: 270px;
+  top: 172px;
+  left: 102px;
+  width: 290px;
+  height: 290px;
   background-position: 72% 72%;
 }
 
@@ -3385,8 +3385,8 @@ button {
 
   .stage-two-body .menu-circle-top {
     left: -18px;
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
 
   .stage-two-body .menu-circle-bottom {
@@ -3682,7 +3682,7 @@ button {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
-  min-height: 270px;
+  min-height: 290px;
 }
 
 .stage-two-body .roast-rows h3 {
@@ -3694,18 +3694,25 @@ button {
 
 .stage-two-body .roast-rows img {
   width: 100%;
-  height: 270px;
+  height: 290px;
   object-fit: cover;
 }
 
 
-.stage-two-body .roast-rows .roast-circle {
+
+.stage-two-body .roast-rows article:nth-child(odd) img {
+  border-radius: 500px 0 0 500px;
+}
+
+.stage-two-body .roast-rows article:nth-child(even) img {
+  border-radius: 0 500px 500px 0;
+}.stage-two-body .roast-rows .roast-circle {
   position: absolute;
   z-index: 2;
   top: 50%;
   width: 230px;
   height: 230px;
-  border: 12px solid #fff;
+  border: 4px solid #fff;
   border-radius: 50%;
   background: #fff url("../images/hero-coffee-woman.webp") center center / cover no-repeat;
   pointer-events: none;
@@ -7674,7 +7681,7 @@ textarea:focus {
 
   #body-content .s90 { padding: 62px 0; background: linear-gradient(rgba(28,24,20,.82),rgba(28,24,20,.82)), url("../images/body/04-coffee-beans.webp") center/cover; }
   #body-content .s90 .ext-heading { margin-bottom: 38px; }
-  #body-content .s90 .ext-stats article { min-height: 270px; display: grid; place-content: center; }
+  #body-content .s90 .ext-stats article { min-height: 290px; display: grid; place-content: center; }
 
   #body-content .s92 { padding: 52px 0; }
   #body-content .s92 .ext-image-cards { height: 452px; }
@@ -9316,4 +9323,12 @@ textarea:focus {
 }
 .coshte-hero .hero-header.is-sticky-visible {
   background: #ffffff !important;
+}
+
+/* Hero rectangular media scale correction */
+.coshte-hero .hero-visual img {
+  width: calc(100% + 20px);
+  max-width: none;
+  height: calc(100% + 20px);
+  margin: -10px;
 }
