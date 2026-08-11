@@ -9486,7 +9486,7 @@ textarea:focus {
     --roast-image-width: clamp(420px, 37vw, 520px);
     --roast-image-height: 260px;
     --roast-image-offset: clamp(84px, 8vw, 126px);
-    --roast-fade-width: clamp(210px, 17vw, 280px);
+    --roast-fade-width: clamp(350px, 35vw, 450px);
     --roast-circle-half: 105px;
   }
 
@@ -9545,7 +9545,7 @@ textarea:focus {
 
   #body-content .s09.roast-process .roast-metrics span {
     display: block;
-    color: #fff !important;
+    color: #ccc !important;
     font-size: 12px;
     font-weight: 800;
     line-height: 1;
@@ -9555,7 +9555,7 @@ textarea:focus {
   #body-content .s09.roast-process .roast-metrics strong {
     display: block;
     margin-top: 5px;
-    color: #fff !important;
+    color: #ccc !important;
     font-size: 30px !important;
     line-height: 1;
   }
@@ -9581,11 +9581,11 @@ textarea:focus {
 
   #body-content .s09.roast-process .roast-rows article:nth-child(odd)::after {
     left: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
-    background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, #111 100%);
+    background: linear-gradient(90deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, .16) 26%, rgba(17, 17, 17, .42) 44%, rgba(17, 17, 17, .72) 64%, rgba(17, 17, 17, .92) 84%, #111 100%);
   }
 
   #body-content .s09.roast-process .roast-rows article:nth-child(even)::after {
     right: calc(50% + var(--roast-image-offset) + var(--roast-image-width) - var(--roast-fade-width));
-    background: linear-gradient(270deg, rgba(17, 17, 17, 0) 0%, #111 100%);
+    background: linear-gradient(270deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, .16) 26%, rgba(17, 17, 17, .42) 44%, rgba(17, 17, 17, .72) 64%, rgba(17, 17, 17, .92) 84%, #111 100%);
   }
 }
