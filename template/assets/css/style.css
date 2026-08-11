@@ -1581,6 +1581,30 @@ h6,
   font-family: var(--font-main);
   letter-spacing: 0;
 }
+
+p,
+li,
+th,
+td,
+summary,
+small,
+.section-heading span,
+.body-card-grid p,
+.body-card-grid strong,
+.quote-grid strong,
+.footer-column a,
+.footer-column p,
+.footer-newsletter-copy p,
+.footer-brand-block p,
+.footer-bottom,
+.rating-card small,
+.origin-badge span,
+.feature-pill strong,
+.ref-link {
+  font-size: var(--fs-base) !important;
+  line-height: 1.65;
+}
+
 .main-nav,
 .main-nav a,
 .submenu a,
@@ -1886,6 +1910,18 @@ button {
   box-shadow: var(--shadow);
   background: #000;
 }
+
+.ref-link {
+  font-family: var(--font-main);
+  line-height: 52px !important;
+}
+
+.ref-link:hover,
+.ref-link:focus-visible {
+  opacity: .9 !important;
+  color: #fff !important;
+}
+
 @media (max-width: 991px) {
   .main-nav .nav-item {
     width: 100%;
@@ -1941,6 +1977,14 @@ button {
   .body-section {
     padding: 64px 20px;
   }
+  .ref-link {
+    width: 46px !important;
+    height: 46px !important;
+    line-height: 38px !important;
+    font-size: 18px !important;
+    right: 64px !important;
+  }
+  .ref-link-original {
     right: 12px !important;
   }
 }
@@ -2976,7 +3020,7 @@ button {
 }
 
 
-
+/* Stage 02: 36 reference-led body sections */
 .stage-two-body {
   --body-ink: #272523;
   --body-cream: #f0efe7;
@@ -3359,8 +3403,8 @@ button {
   z-index: 1;
   top: 0;
   left: -42px;
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
   background-position: 18% 38%;
 }
 
@@ -3368,8 +3412,8 @@ button {
   z-index: 2;
   top: 172px;
   left: 102px;
-  width: 290px;
-  height: 290px;
+  width: 260px;
+  height: 260px;
   background-position: 72% 72%;
 }
 
@@ -3385,15 +3429,15 @@ button {
 
   .stage-two-body .menu-circle-top {
     left: -18px;
-    width: 300px;
-    height: 300px;
+    width: 274px;
+    height: 274px;
   }
 
   .stage-two-body .menu-circle-bottom {
     top: 154px;
     left: 112px;
-    width: 274px;
-    height: 274px;
+    width: 260px;
+    height: 260px;
   }
 }
 
@@ -3682,7 +3726,7 @@ button {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
-  min-height: 290px;
+  min-height: 260px;
 }
 
 .stage-two-body .roast-rows h3 {
@@ -3694,7 +3738,7 @@ button {
 
 .stage-two-body .roast-rows img {
   width: 100%;
-  height: 290px;
+  height: 260px;
   object-fit: cover;
 }
 
@@ -3706,12 +3750,14 @@ button {
 
 .stage-two-body .roast-rows article:nth-child(even) img {
   border-radius: 0 500px 500px 0;
-}.stage-two-body .roast-rows .roast-circle {
+}
+
+.stage-two-body .roast-rows .roast-circle {
   position: absolute;
   z-index: 2;
   top: 50%;
-  width: 230px;
-  height: 230px;
+  width: 210px;
+  height: 210px;
   border: 4px solid #fff;
   border-radius: 50%;
   background: #fff url("../images/hero-coffee-woman.webp") center center / cover no-repeat;
@@ -3721,11 +3767,11 @@ button {
 }
 
 .stage-two-body .roast-rows article:nth-child(odd) .roast-circle {
-  left: calc(50% + 34px);
+  left: calc(50% + 30px);
 }
 
 .stage-two-body .roast-rows article:nth-child(even) .roast-circle {
-  right: calc(50% + 34px);
+  right: calc(50% + 30px);
 }
 
 @media (max-width: 991.98px) {
@@ -5263,7 +5309,7 @@ button {
   }
 }
 
-
+/* Stage 03: Coshte reference footer */
 .site-footer.coshte-footer {
   position: relative;
   min-height: clamp(760px, 57.3vw, 1100px);
@@ -5590,6 +5636,12 @@ address {
 .brand-name {
   font-size: var(--type-logo) !important;
 }
+
+.ref-link {
+  font-size: var(--type-ref) !important;
+  line-height: 52px !important;
+}
+
 .coffee-marquee span,
 .benefit-intro,
 .section-lead {
@@ -6005,6 +6057,27 @@ address {
   object-fit: cover;
   background: var(--cafezi-ink);
 }
+
+.ref-link,
+.ref-link:visited {
+  display: block !important;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  padding: 0 !important;
+  color: var(--cafezi-white) !important;
+  background: #000000 !important;
+}
+
+.ref-link:hover,
+.ref-link:focus-visible,
+.ref-link:active {
+  color: var(--cafezi-white) !important;
+  background: var(--cafezi-sage) !important;
+  opacity: 1 !important;
+}
+
 .field-shell {
   position: relative;
   display: block;
@@ -6233,6 +6306,12 @@ textarea:focus {
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
   }
+
+  .ref-link {
+    right: 10px !important;
+  }
+
+  .ref-link-cut {
     right: 80px !important;
   }
 }
@@ -6484,6 +6563,14 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background-color: rgba(255, 255, 255, .08) !important;
 }
+
+#contact .ref-link,
+#contact .ref-link:visited,
+#contact .ref-link:hover,
+#contact .ref-link:focus-visible {
+  color: var(--cafezi-white) !important;
+}
+
 #contact .coshte-footer__headline a:hover,
 #contact .coshte-footer__headline a:focus-visible {
   color: var(--cafezi-ink) !important;
@@ -6502,6 +6589,15 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background: var(--cafezi-ink) !important;
 }
+
+#body-content .ref-link,
+#body-content .ref-link:visited,
+#body-content .ref-link:hover,
+#body-content .ref-link:focus-visible,
+#body-content .ref-link:active {
+  color: var(--cafezi-white) !important;
+}
+
 #contact .cafezi-logo,
 #contact .cafezi-logo:hover,
 #contact .cafezi-logo:focus,
@@ -7129,7 +7225,101 @@ textarea:focus {
     margin-left: auto;
   }
 }
+/* ETAPA 04G: reference controls */
+.has-reference-controls {
+  position: relative;
+}
+
+.reference-controls {
+  position: absolute;
+  z-index: 9999999;
+  top: 50%;
+  right: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  gap: 10px;
+  width: 130px;
+  transform: translateY(-50%);
+  pointer-events: auto;
+}
+
+.reference-control,
+.reference-control:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 0;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #000000;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
+  font: 800 24px/1 Manrope, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.reference-control:hover,
+.reference-control:focus-visible,
+.reference-control:active {
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.reference-control:focus-visible {
+  outline: 3px solid #f4c95d;
+  outline-offset: 3px;
+}
+
+.reference-control--multi.is-active,
+.reference-control--number.is-copied {
+  color: #ffffff;
+  background: #16803b;
+  opacity: 1;
+}
+
+.reference-control--number.is-selected {
+  box-shadow: 0 0 0 3px #16803b, 0 4px 18px rgba(0, 0, 0, 0.24);
+}
+
+.reference-control--number.is-copy-error {
+  background: #a52a2a;
+  opacity: 1;
+}
+
+.reference-control i {
+  line-height: 1;
+}
+
+.reference-copy-status {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
+  .reference-control {
+    transition: none;
+  }
 }
 
 /* ETAPA 02b / 04 / 05: sections 73-113 */
@@ -7159,6 +7349,7 @@ textarea:focus {
 .ext-heading.centered { margin-right: auto; margin-left: auto; text-align: center; }
 .ext-heading > span, .ext-eyebrow, .ext-section [class*="copy"] > span, .ext-section figcaption > span { display: inline-block; margin-bottom: 14px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ext-heading p { max-width: 620px; margin-right: auto; margin-left: auto; }
+.ext-button, .ext-section button:not(.reference-control), .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
 .ext-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 148px; padding: 12px 22px; border: 1px solid currentColor; border-radius: 999px; font-weight: 750; text-decoration: none; transition: transform .25s ease, color .25s ease, background-color .25s ease, border-color .25s ease; }
 .ext-button:hover, .ext-button:focus-visible { color: #fff; background: var(--ext-brown); border-color: var(--ext-brown); transform: translateY(-2px); }
 .ext-button.dark { color: #fff; background: var(--ext-ink); border-color: var(--ext-ink); }
@@ -7850,7 +8041,7 @@ textarea:focus {
 
   #body-content .s112 .container { height: 100%; }
 }
-
+/* Fidelity review pass 2: palette, text contrast, and source-like card treatment. */
 @media (min-width: 1200px) {
   #body-content .cafe-section.s08 {
     color: #272523 !important;
@@ -8399,7 +8590,7 @@ textarea:focus {
     font-size: 14px;
   }
 }
-
+/* Fidelity review pass 7: screenshot-visible copy alignment and final desktop layering. */
 @media (min-width: 1200px) {
   #body-content .s29 .welcome-one {
     position: relative;
@@ -8897,7 +9088,7 @@ textarea:focus {
   }
 }
 
-
+/* Section 8 source-faithful product rail */
 #body-content .cafe-section.s08 {
   --s08-bg: #ece7df;
   --s08-brown: #332923;
