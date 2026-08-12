@@ -291,6 +291,51 @@
   $(window).on("scroll resize", updateFloatingReserve);
   updateFloatingReserve();
 
+  $(".grain-categories-wrapper").each(function () {
+    var $wrapper = $(this);
+    var $track = $wrapper.find(".grain-category-carousel");
+    var $prev = $wrapper.find(".grain-category-prev");
+    var $next = $wrapper.find(".grain-category-next");
+    var raf = null;
+
+    if (!$track.length) {
+      return;
+    }
+
+    function getCategoryStep() {
+      var card = $track.find(".grain-category-card").get(0);
+      if (!card) {
+        return Math.max($track.width() * .75, 240);
+      }
+      return card.getBoundingClientRect().width + 30;
+    }
+
+    function updateCategoryNav() {
+      var track = $track.get(0);
+      var max = Math.max(0, track.scrollWidth - track.clientWidth - 2);
+      $prev.prop("disabled", track.scrollLeft <= 2);
+      $next.prop("disabled", track.scrollLeft >= max);
+    }
+
+    function scheduleCategoryNav() {
+      if (raf) {
+        window.cancelAnimationFrame(raf);
+      }
+      raf = window.requestAnimationFrame(updateCategoryNav);
+    }
+
+    $prev.on("click", function () {
+      $track.get(0).scrollBy({ left: -getCategoryStep(), behavior: "smooth" });
+    });
+
+    $next.on("click", function () {
+      $track.get(0).scrollBy({ left: getCategoryStep(), behavior: "smooth" });
+    });
+
+    $track.on("scroll", scheduleCategoryNav);
+    $(window).on("resize", scheduleCategoryNav);
+    updateCategoryNav();
+  });
   var $heroVisual = $(".coshte-hero .hero-visual");
   if ($heroVisual.length && window.gsap && !reduceMotion) {
     $heroVisual.on("pointermove", function (event) {

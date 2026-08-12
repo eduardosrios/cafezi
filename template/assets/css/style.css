@@ -1905,6 +1905,7 @@ button {
   box-shadow: var(--shadow);
   background: #000;
 }
+
 @media (max-width: 991px) {
   .main-nav .nav-item {
     width: 100%;
@@ -1959,6 +1960,16 @@ button {
   }
   .body-section {
     padding: 64px 20px;
+  }
+  .hidden-marker-link {
+    width: 46px !important;
+    height: 46px !important;
+    line-height: 38px !important;
+    font-size: 18px !important;
+    right: 64px !important;
+  }
+  .hidden-marker-link-original {
+    right: 12px !important;
   }
 }
 
@@ -5625,6 +5636,7 @@ address {
 .brand-name {
   font-size: var(--type-logo) !important;
 }
+
 .coffee-marquee span,
 .benefit-intro,
 .section-lead {
@@ -6040,6 +6052,7 @@ address {
   object-fit: cover;
   background: var(--cafezi-ink);
 }
+
 .field-shell {
   position: relative;
   display: block;
@@ -6267,6 +6280,14 @@ textarea:focus {
   .stage-two-body .cafe-section > .section-inner {
     padding-top: var(--space-4);
     padding-bottom: var(--space-4);
+  }
+
+  .hidden-marker-link {
+    right: 10px !important;
+  }
+
+  .hidden-marker-link-cut {
+    right: 80px !important;
   }
 }
 
@@ -6517,6 +6538,14 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background-color: rgba(255, 255, 255, .08) !important;
 }
+
+#contact .hidden-marker-link,
+#contact .hidden-marker-link:visited,
+#contact .hidden-marker-link:hover,
+#contact .hidden-marker-link:focus-visible {
+  color: var(--cafezi-white) !important;
+}
+
 #contact .coshte-footer__headline a:hover,
 #contact .coshte-footer__headline a:focus-visible {
   color: var(--cafezi-ink) !important;
@@ -6535,6 +6564,15 @@ textarea:focus {
   color: var(--cafezi-white) !important;
   background: var(--cafezi-ink) !important;
 }
+
+#body-content .hidden-marker-link,
+#body-content .hidden-marker-link:visited,
+#body-content .hidden-marker-link:hover,
+#body-content .hidden-marker-link:focus-visible,
+#body-content .hidden-marker-link:active {
+  color: var(--cafezi-white) !important;
+}
+
 #contact .cafezi-logo,
 #contact .cafezi-logo:hover,
 #contact .cafezi-logo:focus,
@@ -7163,6 +7201,9 @@ textarea:focus {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .hidden-marker-control {
+    transition: none;
+  }
 }
 
 /* ETAPA 02b / 04 / 05: sections 73-113 */
@@ -7192,6 +7233,7 @@ textarea:focus {
 .ext-heading.centered { margin-right: auto; margin-left: auto; text-align: center; }
 .ext-heading > span, .ext-eyebrow, .ext-section [class*="copy"] > span, .ext-section figcaption > span { display: inline-block; margin-bottom: 14px; font-size: .76rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ext-heading p { max-width: 620px; margin-right: auto; margin-left: auto; }
+.ext-button, .ext-section button:not(.hidden-marker-control), .ext-section input, .ext-section select { min-height: 48px; font: inherit; }
 .ext-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 148px; padding: 12px 22px; border: 1px solid currentColor; border-radius: 999px; font-weight: 750; text-decoration: none; transition: transform .25s ease, color .25s ease, background-color .25s ease, border-color .25s ease; }
 .ext-button:hover, .ext-button:focus-visible { color: #fff; background: var(--ext-brown); border-color: var(--ext-brown); transform: translateY(-2px); }
 .ext-button.dark { color: #fff; background: var(--ext-ink); border-color: var(--ext-ink); }
@@ -9385,6 +9427,149 @@ textarea:focus {
   max-width: none;
   height: calc(100% + 20px);
   margin: -10px;
+}
+#body-content .body-section.grain-categories {
+  padding: 0;
+  color: var(--cafezi-ink);
+  background: #fff !important;
+  background-color: #fff !important;
+}
+
+#body-content .grain-categories .grain-categories-shell {
+  width: 100%;
+  border-top: 8px solid #000;
+  background: #fff;
+}
+
+#body-content .grain-categories .grain-categories-wrapper {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 7vw, 104px) 0 clamp(64px, 7vw, 112px);
+  overflow: hidden;
+}
+
+#body-content .grain-categories .grain-categories-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+#body-content .grain-categories .grain-categories-heading .section-index {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#body-content .grain-categories .grain-categories-heading h2 {
+  margin: 0;
+  color: #000;
+  font-size: clamp(2.35rem, 5.8vw, 5.25rem);
+  line-height: .9;
+  letter-spacing: -.055em;
+  text-transform: uppercase;
+}
+
+#body-content .grain-categories .grain-category-nav {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 14px;
+}
+
+#body-content .grain-categories .grain-category-nav button {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #000;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+#body-content .grain-categories .grain-category-nav button:hover {
+  transform: translateY(-2px);
+}
+
+#body-content .grain-categories .grain-category-nav button:disabled {
+  opacity: .3;
+  cursor: default;
+  transform: none;
+}
+
+#body-content .grain-categories .grain-category-carousel {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+#body-content .grain-categories .grain-category-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#body-content .grain-categories .grain-category-card {
+  display: grid;
+  flex: 0 0 clamp(188px, 22vw, 286px);
+  min-height: 224px;
+  place-items: center;
+  align-content: center;
+  padding: 34px 28px;
+  border: 1px solid rgba(0, 0, 0, .12);
+  border-radius: 0;
+  background: #fff;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+#body-content .grain-categories .grain-category-card img {
+  display: block;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 24px;
+  object-fit: contain;
+}
+
+#body-content .grain-categories .grain-category-card h3 {
+  margin: 0;
+  color: #000;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+
+#body-content .grain-categories .grain-category-card h3 span {
+  display: block;
+  margin-top: 8px;
+  font-size: .62em;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 767px) {
+  #body-content .grain-categories .grain-categories-heading {
+    display: block;
+  }
+
+  #body-content .grain-categories .grain-category-nav {
+    margin-top: 24px;
+  }
+
+  #body-content .grain-categories .grain-category-card {
+    flex-basis: min(72vw, 260px);
+    min-height: 204px;
+  }
 }
 #body-content .s09.roast-process {
   color: #fff !important;
