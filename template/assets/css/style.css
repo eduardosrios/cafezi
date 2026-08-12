@@ -2627,7 +2627,7 @@ button {
 .coshte-hero .hero-buy span {
   font-size: 18px !important;
   font-weight: 500;
-  text-transform: capitalize;
+
 }
 
 .coshte-hero .hero-buy:hover,
@@ -9585,7 +9585,7 @@ textarea:focus {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: clamp(28px, 4vw, 44px);
+  margin-bottom: clamp(48px, 5.5vw, 76px);
 }
 
 #body-content .grain-categories .grain-categories-heading .section-index {
@@ -9611,6 +9611,17 @@ textarea:focus {
   font-size: clamp(2.35rem, 5.8vw, 5.25rem);
   line-height: .9;
   letter-spacing: -.055em;
+  text-transform: uppercase;
+}
+#body-content .grain-categories .grain-categories-subtitle {
+  display: block;
+  margin: 14px 0 0;
+  color: rgba(39, 37, 35, .72) !important;
+  font-size: 19px !important;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-left: .5px;
+  letter-spacing: .04em;
   text-transform: uppercase;
 }
 
@@ -9654,8 +9665,9 @@ textarea:focus {
   gap: 30px;
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 6px;
+  padding: 0 clamp(230px, 24vw, 380px) 6px 0;
   scroll-behavior: smooth;
+  scroll-padding-right: clamp(230px, 24vw, 380px);
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
@@ -9700,7 +9712,7 @@ textarea:focus {
 #body-content .grain-categories .grain-category-card h3 span {
   display: block;
   margin-top: 8px;
-  font-size: .55em !important;
+  font-size: 16px !important;
   font-weight: 600;
   padding-left: .5px;
   letter-spacing: .04em;
@@ -9722,6 +9734,10 @@ textarea:focus {
     height: 84px;
   }
 
+  #body-content .grain-categories .grain-category-carousel {
+    padding-right: 190px;
+    scroll-padding-right: 190px;
+  }
   #body-content .grain-categories .grain-category-card {
     flex-basis: min(72vw, 260px);
     min-height: 0;
