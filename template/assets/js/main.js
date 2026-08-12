@@ -572,7 +572,7 @@
 
 
 
-/* ETAPA 05: interactions for sections 73-113 */
+/* Interactions for extended sections. */
 (function () {
   "use strict";
 

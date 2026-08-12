@@ -7297,11 +7297,11 @@ textarea:focus {
 .ext-photo-tile > div { position: absolute; z-index: 1; top: 50%; left: 9%; max-width: 65%; color: #fff; transform: translateY(-50%); }
 .ext-photo-tile h2 { font-size: clamp(2rem, 3.6vw, 3.7rem); }
 .ext-split-story { padding-top: 90px; padding-bottom: 90px; background: var(--ext-paper); }
-.ext-split-story .ext-copy-panel { display: flex; min-height: 410px; padding: 46px; flex-direction: column; justify-content: center; color: #fff; background: #1f3026; }
+.ext-split-story .ext-copy-panel { display: flex; min-height: 410px; padding: 46px; flex-direction: column; justify-content: center; color: #fff; background: #000; }
 .ext-split-story .ext-copy-panel.light { color: var(--ext-ink); background: #e5dfd2; }
 .ext-round-media { display: grid; place-items: center; margin: 0; background: #e7ded0; }
 .ext-round-media img { width: min(78%, 300px); aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
-.ext-hours { color: #fff; background: #16271b; }
+.ext-hours { color: #fff; background: #000; }
 .ext-hours-grid { display: grid; max-width: 920px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); gap: 30px 90px; text-align: center; }
 .ext-hours-grid div { padding: 22px 10px; border-bottom: 1px solid rgba(255,255,255,.24); }
 .ext-hours-grid dt { margin-bottom: 8px; font-weight: 700; }
@@ -7313,7 +7313,8 @@ textarea:focus {
 .ext-booking-form { background: var(--ext-paper); }
 .ext-reservation { max-width: 1080px; margin: 0 auto; padding: clamp(30px, 5vw, 64px); border: 1px solid #cbbdaa; box-shadow: 0 24px 70px rgba(59,49,43,.09); }
 .ext-reservation label > span { display: block; margin-bottom: 8px; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
-.ext-reservation input, .ext-reservation select { width: 100%; padding: 10px 14px; border: 1px solid #9d9387; border-radius: 0; color: var(--ext-ink); background: #fff; }
+.ext-reservation input, .ext-reservation select { width: 100%; min-height: 58px; padding: 15px 18px; border: 1px solid #9d9387; border-radius: 0; color: var(--ext-ink); background: #fff; }
+.ext-reservation select { padding-right: 52px; appearance: none; -webkit-appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ext-ink) 50%), linear-gradient(135deg, var(--ext-ink) 50%, transparent 50%); background-position: calc(100% - 23px) 50%, calc(100% - 17px) 50%; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
 .ext-reservation .ext-button { width: 100%; }
 .ext-form-status { min-height: 25px; margin: 18px 0 0; text-align: center; font-weight: 700; }
 .ext-mosaic { padding: 0; }
@@ -7451,7 +7452,7 @@ textarea:focus {
 .ext-follow-row { padding: 24px 0; background: #cbb38b; }
 .ext-follow-row .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .ext-follow-row strong { font-size: .86rem; text-transform: uppercase; letter-spacing: .08em; }
-.ext-marquee { padding: 22px 0; color: #fff; background: #0a3242; }
+.ext-marquee { padding: 22px 0; color: #fff; background: #000; }
 .ext-marquee-track { display: flex; width: max-content; min-width: 100%; align-items: center; justify-content: space-around; gap: 24px; font-family: var(--font-main); font-size: clamp(1.25rem, 2vw, 2rem); text-transform: uppercase; }
 .ext-marquee-track i { color: #d66a86; font-size: .78rem; }
 .ext-handpicked { background: #fff; }
@@ -7579,7 +7580,7 @@ textarea:focus {
 .stage-two-extension .s73 { color: #fff !important; background: #111415 !important; }
 .stage-two-extension .s74 { padding-top: 30px; padding-bottom: 30px; background: #111415 !important; }
 .stage-two-extension .s75 { padding-top: 90px; padding-bottom: 90px; background: #fbfaf5 !important; }
-.stage-two-extension .s76 { color: #fff !important; background: #16271b !important; }
+.stage-two-extension .s76 { color: #fff !important; background: #000 !important; }
 .stage-two-extension .s77 { min-height: 590px; padding-top: 0; padding-bottom: 0; color: #fff !important; background: #171513 !important; }
 .stage-two-extension .s78 { background: #fbfaf5 !important; }
 .stage-two-extension .s79 { padding-top: 0; padding-bottom: 0; background: #f0efe7 !important; }
@@ -7604,7 +7605,7 @@ textarea:focus {
 .stage-two-extension .s100 { min-height: 430px; color: #fff !important; background: #171513 !important; }
 .stage-two-extension .s101, .stage-two-extension .s102 { background: #cbb38b !important; }
 .stage-two-extension .s102 { padding-top: 24px; padding-bottom: 24px; }
-.stage-two-extension .s103 { padding-top: 22px; padding-bottom: 22px; color: #fff !important; background: #0a3242 !important; }
+.stage-two-extension .s103 { padding-top: 22px; padding-bottom: 22px; color: #fff !important; background: #000 !important; }
 .stage-two-extension .s104 { background: #fff !important; }
 .stage-two-extension .s105 { background: #fbfaf7 !important; }
 .stage-two-extension .s106 { padding-top: 0; padding-bottom: 0; color: #096b38 !important; background: #f3ead9 !important; }
@@ -8511,7 +8512,7 @@ textarea:focus {
     font-size: 14px;
   }
 }
-/* Fidelity review pass 7: screenshot-visible copy alignment and final desktop layering. */
+/* Final desktop copy alignment and layering. */
 @media (min-width: 1200px) {
   #body-content .s29 .welcome-one {
     position: relative;
@@ -9657,6 +9658,11 @@ textarea:focus {
 
 #body-content .s09.roast-process :where(.section-index, h2, h3, p) {
   color: #fff !important;
+}
+
+#body-content .s09.roast-process .roast-rows article {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 #body-content .s09.roast-process .center-heading.compact {
