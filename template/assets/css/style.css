@@ -9594,6 +9594,17 @@ textarea:focus {
   color: #000;
 }
 
+#body-content .grain-categories .grain-categories-wrapper::after {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: clamp(64px, 7vw, 112px);
+  width: clamp(230px, 24vw, 380px);
+  height: 108px;
+  pointer-events: none;
+  background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, .96) 30%, rgba(255, 255, 255, .72) 58%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+}
 #body-content .grain-categories .grain-categories-heading h2 {
   margin: 0;
   color: #000;
@@ -9604,6 +9615,10 @@ textarea:focus {
 }
 
 #body-content .grain-categories .grain-category-nav {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: calc(clamp(64px, 7vw, 112px) + 19px);
   display: flex;
   flex: 0 0 auto;
   gap: 14px;
@@ -9697,7 +9712,14 @@ textarea:focus {
   }
 
   #body-content .grain-categories .grain-category-nav {
-    margin-top: 24px;
+    right: 0;
+    bottom: calc(clamp(64px, 7vw, 112px) + 10px);
+    margin-top: 0;
+  }
+
+  #body-content .grain-categories .grain-categories-wrapper::after {
+    width: 148px;
+    height: 84px;
   }
 
   #body-content .grain-categories .grain-category-card {
