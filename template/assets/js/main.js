@@ -640,7 +640,6 @@
   if (quoteNext) quoteNext.addEventListener("click", function () { showQuote(quoteIndex + 1); });
 
   var menuCards = Array.prototype.slice.call(root.querySelectorAll(".ext-menu-card-grid [data-kind]"));
-  var filterStatus = root.querySelector(".ext-filter-status");
   root.querySelectorAll("[data-ext-filter]").forEach(function (button) {
     button.addEventListener("click", function () {
       var filter = button.getAttribute("data-ext-filter");
@@ -655,7 +654,6 @@
         card.hidden = !visible;
         if (visible) shown += 1;
       });
-      if (filterStatus) filterStatus.textContent = shown + (shown === 1 ? " drink" : " drinks");
     });
   });
 
