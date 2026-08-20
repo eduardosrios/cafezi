@@ -568,11 +568,12 @@
       $button.text("Add to cart").prop("disabled", false);
     }, 1600);
   });
+
 })(jQuery);
 
 
 
-/* Interactions for extended sections. */
+/* ETAPA 05: interactions for sections 73-113 */
 (function () {
   "use strict";
 
