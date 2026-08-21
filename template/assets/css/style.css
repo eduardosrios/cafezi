@@ -2640,7 +2640,7 @@ button {
 .coshte-hero .hero-visual {
   position: relative;
   margin: 70px 4.65vw 0;
-  aspect-ratio: 1742 / 823;
+  aspect-ratio: 5 / 2;
   overflow: hidden;
   background: #d7d6cd;
 }
@@ -2667,13 +2667,46 @@ button {
 }
 
 .coshte-hero .hero-visual-media {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
-  background-image: url("https://img.magnific.com/premium-photo/high-angle-coffee-machine-cups_641503-371492.jpg?w=1799");
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.coshte-hero .hero-visual-card {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.coshte-hero .hero-visual-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: var(--hero-next-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .45s ease;
+}
+
+.coshte-hero .hero-visual-card.is-changing::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coshte-hero .hero-visual-card::after {
+    transition: none;
+  }
 }
 
 .coshte-hero .hero-outro {
@@ -8747,9 +8780,9 @@ textarea:focus {
   border-radius: 50%;
   background: #eeece3;
   box-shadow: 0 24px 54px rgb(from var(--color-black) r g b / .18);
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   left: 50%;
-  top: 150px;
+  top: calc(100% + 70px);
 }
 
 .coshte-hero .hero-companion img {
@@ -8825,6 +8858,10 @@ textarea:focus {
 
   .coshte-hero .hero-visual {
     margin-top: 53px;
+  }
+
+  .coshte-hero .hero-companion {
+    top: calc(100% + 53px);
   }
 
   .coshte-hero .hero-actions .hero-buy {
@@ -8923,6 +8960,10 @@ textarea:focus {
   .coshte-hero .hero-visual {
     margin-top: 8px;
   }
+
+  .coshte-hero .hero-companion {
+    top: calc(100% + 8px);
+  }
 }
 
 @media (max-width: 640px) {
@@ -8961,6 +9002,10 @@ textarea:focus {
 
   .coshte-hero .hero-visual {
     margin-top: 0;
+  }
+
+  .coshte-hero .hero-companion {
+    top: 100%;
   }
 }
 

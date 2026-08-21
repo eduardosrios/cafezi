@@ -415,6 +415,71 @@
     scheduleHeroFooterFit();
   }
 
+  var heroCards = Array.prototype.slice.call(document.querySelectorAll(".coshte-hero .hero-visual-card"));
+  var heroImages = [
+    "https://img.magnific.com/free-photo/coffee-beans-iron-spoon_140725-3395.jpg?w=1799",
+    "https://img.magnific.com/free-photo/rastafari-movement-with-individual-wearing-dreads_23-2151711963.jpg?w=1799",
+    "https://img.magnific.com/premium-photo/noir-coffee-bliss-elegant-espresso-moments-cafe-bar-black_960396-118685.jpg?w=1799"
+  ];
+  var heroImageIndex = 2;
+  var heroCardIndex = 0;
+  var heroSliderTimer = 0;
+
+  function changeNextHeroCard() {
+    var card = heroCards[heroCardIndex];
+    var imageUrl = heroImages[heroImageIndex];
+
+    if (!card || !imageUrl) {
+      return;
+    }
+
+    card.style.setProperty("--hero-next-image", 'url("' + imageUrl + '")');
+    card.classList.add("is-changing");
+
+    window.setTimeout(function () {
+      card.style.backgroundImage = 'url("' + imageUrl + '")';
+      card.classList.remove("is-changing");
+      card.style.removeProperty("--hero-next-image");
+    }, reduceMotion ? 0 : 450);
+
+    heroImageIndex = (heroImageIndex + 1) % heroImages.length;
+    heroCardIndex = (heroCardIndex + 1) % heroCards.length;
+  }
+
+  function startHeroSlider() {
+    if (document.hidden || heroSliderTimer || heroCards.length !== 2) {
+      return;
+    }
+    heroSliderTimer = window.setInterval(changeNextHeroCard, 1500);
+  }
+
+  function stopHeroSlider() {
+    if (!heroSliderTimer) {
+      return;
+    }
+    window.clearInterval(heroSliderTimer);
+    heroSliderTimer = 0;
+  }
+
+  if (heroCards.length === 2) {
+    Promise.all(heroImages.map(function (imageUrl) {
+      return new Promise(function (resolve) {
+        var image = new Image();
+        image.onload = resolve;
+        image.onerror = resolve;
+        image.src = imageUrl;
+      });
+    })).then(startHeroSlider);
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        stopHeroSlider();
+      } else {
+        startHeroSlider();
+      }
+    });
+  }
+
   var $heroVisual = $(".coshte-hero .hero-visual");
   if ($heroVisual.length && window.gsap && !reduceMotion) {
     $heroVisual.on("pointermove", function (event) {
