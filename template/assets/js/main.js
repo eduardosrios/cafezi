@@ -418,7 +418,8 @@
   var heroCards = Array.prototype.slice.call(document.querySelectorAll(".coshte-hero .hero-visual-card"));
   var heroImages = [
     "https://img.magnific.com/premium-photo/noir-coffee-bliss-elegant-espresso-moments-cafe-bar-black_960396-118685.jpg?w=1799",
-    "https://img.magnific.com/free-photo/rastafari-movement-with-individual-wearing-dreads_23-2151711963.jpg?w=1799"
+    "https://img.magnific.com/free-photo/rastafari-movement-with-individual-wearing-dreads_23-2151711963.jpg?w=1799",
+    "https://img.magnific.com/free-photo/coffee-beans-iron-spoon_140725-3395.jpg?w=1799"
   ];
   var heroCardImageIndexes = [0, 1];
   var heroCardIndex = 0;

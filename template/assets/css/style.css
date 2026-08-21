@@ -2684,6 +2684,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: 10000px 0 0 rgb(from var(--color-black) r g b / .2) inset;
 }
 
 .coshte-hero .hero-visual-card::after {
@@ -2694,6 +2695,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: inherit;
   opacity: 0;
   pointer-events: none;
   transition: opacity .45s ease;
@@ -9583,16 +9585,16 @@ textarea:focus {
   min-height: 0;
   margin-top: 28px;
   margin-left: auto;
-  padding: 0;
+  padding: 12px 20px;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 0;
-  border-radius: 0;
+  border: 1px solid var(--color-black);
+  border-radius: 4px;
   color: var(--color-black);
   background: transparent;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   cursor: pointer;
 }
