@@ -815,7 +815,7 @@ h1 {
 .section-heading p {
   margin: 18px auto 0;
   color: rgb(from var(--color-black) r g b / .72);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
@@ -2656,7 +2656,7 @@ button {
   color: #fff;
   font-family: var(--font-main);
   font-size: var(--hero-footer-font-size, 140px) !important;
-  font-weight: 900;
+  font-weight: 500;
   line-height: .78 !important;
   letter-spacing: .000em !important;
   text-align: left;
@@ -9581,6 +9581,7 @@ textarea:focus {
   display: inline-flex;
   width: auto;
   min-height: 0;
+  margin-top: 28px;
   margin-left: auto;
   padding: 0;
   align-items: center;
@@ -9590,15 +9591,17 @@ textarea:focus {
   border-radius: 0;
   color: var(--color-black);
   background: transparent;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
 }
 
-#body-content .category-view-toggle i {
-  color: var(--color-black);
-  font-size: 16px;
+#body-content .category-view-toggle img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 #body-content .category-view-toggle:hover,

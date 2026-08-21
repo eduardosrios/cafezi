@@ -417,17 +417,19 @@
 
   var heroCards = Array.prototype.slice.call(document.querySelectorAll(".coshte-hero .hero-visual-card"));
   var heroImages = [
-    "https://img.magnific.com/free-photo/coffee-beans-iron-spoon_140725-3395.jpg?w=1799",
-    "https://img.magnific.com/free-photo/rastafari-movement-with-individual-wearing-dreads_23-2151711963.jpg?w=1799",
-    "https://img.magnific.com/premium-photo/noir-coffee-bliss-elegant-espresso-moments-cafe-bar-black_960396-118685.jpg?w=1799"
+    "https://img.magnific.com/premium-photo/noir-coffee-bliss-elegant-espresso-moments-cafe-bar-black_960396-118685.jpg?w=1799",
+    "https://img.magnific.com/free-photo/rastafari-movement-with-individual-wearing-dreads_23-2151711963.jpg?w=1799"
   ];
-  var heroImageIndex = 2;
+  var heroCardImageIndexes = [0, 1];
   var heroCardIndex = 0;
   var heroSliderTimer = 0;
+  var heroSliderReady = false;
+  var aboveIpadViewport = window.matchMedia("(min-width: 1025px)");
 
   function changeNextHeroCard() {
     var card = heroCards[heroCardIndex];
-    var imageUrl = heroImages[heroImageIndex];
+    var nextImageIndex = (heroCardImageIndexes[heroCardIndex] + 1) % heroImages.length;
+    var imageUrl = heroImages[nextImageIndex];
 
     if (!card || !imageUrl) {
       return;
@@ -442,12 +444,13 @@
       card.style.removeProperty("--hero-next-image");
     }, reduceMotion ? 0 : 450);
 
-    heroImageIndex = (heroImageIndex + 1) % heroImages.length;
+    heroCardImageIndexes[heroCardIndex] = nextImageIndex;
     heroCardIndex = (heroCardIndex + 1) % heroCards.length;
   }
 
   function startHeroSlider() {
-    if (document.hidden || heroSliderTimer || heroCards.length !== 2) {
+    var hasEnoughDesktopImages = !aboveIpadViewport.matches || heroImages.length > 2;
+    if (!heroSliderReady || document.hidden || heroSliderTimer || heroCards.length !== 2 || !hasEnoughDesktopImages) {
       return;
     }
     heroSliderTimer = window.setInterval(changeNextHeroCard, 1500);
@@ -461,6 +464,14 @@
     heroSliderTimer = 0;
   }
 
+  function syncHeroSlider() {
+    if (aboveIpadViewport.matches && heroImages.length <= 2) {
+      stopHeroSlider();
+      return;
+    }
+    startHeroSlider();
+  }
+
   if (heroCards.length === 2) {
     Promise.all(heroImages.map(function (imageUrl) {
       return new Promise(function (resolve) {
@@ -469,15 +480,24 @@
         image.onerror = resolve;
         image.src = imageUrl;
       });
-    })).then(startHeroSlider);
+    })).then(function () {
+      heroSliderReady = true;
+      syncHeroSlider();
+    });
 
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
         stopHeroSlider();
       } else {
-        startHeroSlider();
+        syncHeroSlider();
       }
     });
+
+    if (aboveIpadViewport.addEventListener) {
+      aboveIpadViewport.addEventListener("change", syncHeroSlider);
+    } else {
+      aboveIpadViewport.addListener(syncHeroSlider);
+    }
   }
 
   var $heroVisual = $(".coshte-hero .hero-visual");
