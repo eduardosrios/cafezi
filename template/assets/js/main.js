@@ -356,9 +356,9 @@
       var rect = this.getBoundingClientRect();
       var x = ((event.clientX - rect.left) / rect.width - .5) * 12;
       var y = ((event.clientY - rect.top) / rect.height - .5) * 8;
-      gsap.to($heroVisual.find(".hero-visual-media").toArray(), { x: x, y: y, scale: 1.012, duration: .45, ease: "power2.out", overwrite: true });
+      gsap.to($heroVisual.find(".hero-visual-media")[0], { x: x, y: y, scale: 1.012, duration: .45, ease: "power2.out", overwrite: true });
     }).on("pointerleave", function () {
-      gsap.to($heroVisual.find(".hero-visual-media").toArray(), { x: 0, y: 0, scale: 1, duration: .55, ease: "power2.out", overwrite: true });
+      gsap.to($heroVisual.find(".hero-visual-media")[0], { x: 0, y: 0, scale: 1, duration: .55, ease: "power2.out", overwrite: true });
     });
   }
 
