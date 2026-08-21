@@ -2652,28 +2652,17 @@ button {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0 12px 18px;
+  padding: 0 0 18px;
   color: #fff;
   font-family: var(--font-main);
-  font-size: 140px !important;
+  font-size: var(--hero-footer-font-size, 140px) !important;
   font-weight: 900;
   line-height: .78 !important;
   letter-spacing: .000em !important;
-  text-align: center;
+  text-align: left;
+  text-indent: var(--hero-footer-text-indent, 0);
   text-transform: uppercase;
   white-space: nowrap;
-  pointer-events: none;
-}
-
-.coshte-hero .hero-visual::after {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 42%;
-  background: linear-gradient(180deg, transparent 0%, rgb(from var(--color-black) r g b / .16) 26%, rgb(from var(--color-black) r g b / .42) 44%, rgb(from var(--color-black) r g b / .72) 64%, rgb(from var(--color-black) r g b / .92) 84%, var(--color-black) 100%);
-  content: "";
   pointer-events: none;
 }
 
@@ -2681,7 +2670,7 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("../images/hero-coshte-cafe.webp");
+  background-image: url("https://img.magnific.com/premium-photo/high-angle-coffee-machine-cups_641503-371492.jpg?w=1799");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3063,7 +3052,7 @@ button {
 }
 
 
-/* Stage 02: body sections */
+/* Stage 02: 36 reference-led body sections */
 .stage-two-body {
   --body-ink: var(--color-black);
   --body-cream: #f3f3f3;
@@ -5369,7 +5358,7 @@ button {
   }
 }
 
-/* Stage 03: Coshte footer */
+/* Stage 03: Coshte reference footer */
 .site-footer.coshte-footer {
   position: relative;
   min-height: clamp(760px, 57.3vw, 1100px);
@@ -9545,16 +9534,17 @@ textarea:focus {
 
 #body-content .category-view-toggle {
   display: inline-flex;
-  min-height: 54px;
+  width: auto;
+  min-height: 0;
   margin-left: auto;
-  padding: 0 24px;
+  padding: 0;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1px solid var(--color-black);
-  border-radius: 4px;
-  color: #fff;
-  background: var(--color-black);
+  border: 0;
+  border-radius: 0;
+  color: var(--color-black);
+  background: transparent;
   font-size: 17px;
   font-weight: 700;
   line-height: 1;
@@ -9562,14 +9552,14 @@ textarea:focus {
 }
 
 #body-content .category-view-toggle i {
-  color: #fff;
+  color: var(--color-black);
   font-size: 16px;
 }
 
 #body-content .category-view-toggle:hover,
 #body-content .category-view-toggle:focus-visible {
-  color: #fff;
-  background: var(--color-black);
+  color: var(--color-black);
+  background: transparent;
 }
 
 #body-content .category-view-toggle:focus-visible {
@@ -9592,7 +9582,7 @@ textarea:focus {
 
 #body-content .grain-categories .grain-categories-heading {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
   margin-bottom: clamp(48px, 5.5vw, 76px);
@@ -10272,8 +10262,10 @@ textarea::selection {
 }
 
 .coshte-hero .hero-content-wrapper .hero-visual {
+  width: 100vw;
+  max-width: none;
   margin-right: 0;
-  margin-left: 0;
+  margin-left: calc(50% - 50vw);
 }
 
 .coshte-footer > .container .coshte-footer__inner {

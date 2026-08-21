@@ -350,6 +350,71 @@
     $(window).on("resize", scheduleCategoryNav);
     updateCategoryNav();
   });
+
+  var heroFooter = document.querySelector(".coshte-hero .hero-visual-footer");
+  var heroContainerInner = document.querySelector(".coshte-hero .hero-content-wrapper");
+  var heroFooterFitFrame = 0;
+
+  function fitHeroFooter() {
+    heroFooterFitFrame = 0;
+    if (!heroFooter || !heroContainerInner) {
+      return;
+    }
+
+    var innerRect = heroContainerInner.getBoundingClientRect();
+    var visualRect = heroFooter.parentElement.getBoundingClientRect();
+    var innerWidth = innerRect.width;
+    var footerStyle = window.getComputedStyle(heroFooter);
+    var horizontalPadding = parseFloat(footerStyle.paddingLeft) + parseFloat(footerStyle.paddingRight);
+    var availableWidth = Math.max(0, innerWidth - horizontalPadding);
+    var measureCanvas = fitHeroFooter.canvas || (fitHeroFooter.canvas = document.createElement("canvas"));
+    var context = measureCanvas.getContext("2d");
+
+    if (!context || !availableWidth) {
+      return;
+    }
+
+    var sampleSize = 100;
+    context.font = [footerStyle.fontStyle, footerStyle.fontWeight, sampleSize + "px", footerStyle.fontFamily].join(" ");
+    var metrics = context.measureText(heroFooter.textContent.trim());
+    var measuredLeft = Number.isFinite(metrics.actualBoundingBoxLeft) ? metrics.actualBoundingBoxLeft : 0;
+    var measuredRight = Number.isFinite(metrics.actualBoundingBoxRight) ? metrics.actualBoundingBoxRight : metrics.width;
+    var measuredWidth = measuredLeft + measuredRight;
+
+    if (!measuredWidth) {
+      return;
+    }
+
+    var fittedSize = availableWidth * sampleSize / measuredWidth;
+    heroFooter.style.width = innerWidth + "px";
+    heroFooter.style.left = (innerRect.left - visualRect.left) + "px";
+    heroFooter.style.right = "auto";
+    heroFooter.style.transform = "none";
+    heroFooter.style.setProperty("--hero-footer-font-size", fittedSize + "px");
+    heroFooter.style.setProperty("--hero-footer-text-indent", (measuredLeft * fittedSize / sampleSize) + "px");
+  }
+
+  function scheduleHeroFooterFit() {
+    if (heroFooterFitFrame) {
+      window.cancelAnimationFrame(heroFooterFitFrame);
+    }
+    heroFooterFitFrame = window.requestAnimationFrame(fitHeroFooter);
+  }
+
+  if (heroFooter && heroContainerInner) {
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(scheduleHeroFooterFit).observe(heroContainerInner);
+    } else {
+      $(window).on("resize", scheduleHeroFooterFit);
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(scheduleHeroFooterFit);
+    }
+
+    scheduleHeroFooterFit();
+  }
+
   var $heroVisual = $(".coshte-hero .hero-visual");
   if ($heroVisual.length && window.gsap && !reduceMotion) {
     $heroVisual.on("pointermove", function (event) {
